@@ -1,6 +1,5 @@
-# 🌑 LiveSnapVn: The Future of Minimalist Web Experience
 
-![Banner](https://via.placeholder.com/1200x400?text=LiveSnapVn+Minimalist+Design+2026)
+# 🌑 LiveSnapVn: The Future of Minimalist Web Experience
 
 ## 📝 Giới thiệu tổng quan
 **LiveSnapVn** không chỉ là một trang web; đó là một tuyên ngôn về sự tinh tế trong kỷ nguyên số 2026. Chúng tôi theo đuổi triết lý **"Less is More"** (Càng đơn giản càng tinh tế), kết hợp giữa sức mạnh của công nghệ Full-stack hiện đại và nghệ thuật sắp đặt không gian trắng (Negative Space).
@@ -66,3 +65,88 @@ LIVESNAPVN/
 │   └── models/             # Cấu trúc dữ liệu
 ├── .gitignore              # Loại bỏ các file rác khỏi Git
 └── README.md               # Tài liệu hướng dẫn
+
+```
+
+---
+
+## 🚀 Hướng dẫn cài đặt và khởi chạy
+
+### Bước 1: Clone dự án
+
+```bash
+git clone [https://github.com/your-username/livesnapvn.git](https://github.com/your-username/livesnapvn.git)
+cd livesnapvn
+
+```
+
+### Bước 2: Cấu hình Backend
+
+Di chuyển vào thư mục server và cài đặt các phụ thuộc:
+
+```bash
+cd server
+npm install
+
+```
+
+Tạo file `.env` và thêm cổng chạy:
+
+```plaintext
+PORT=5000
+
+```
+
+Khởi động server ở chế độ phát triển:
+
+```bash
+npm run dev
+
+```
+
+### Bước 3: Chạy Frontend
+
+Đơn giản chỉ cần mở file `client/index.html` trên trình duyệt hoặc sử dụng extension **Live Server** trên VS Code để có trải nghiệm tốt nhất.
+
+---
+
+## 🎨 Triết lý thiết kế (Design Philosophy)
+
+Tại **LiveSnapVn**, chúng tôi tin rằng sự chuyên nghiệp đến từ những chi tiết nhỏ nhất:
+
+* **Sự rõ ràng (Clarity):** Nội dung luôn là trọng tâm.
+* **Sự nhất quán (Consistency):** Từ màu sắc đến khoảng cách giữa các phần tử đều tuân theo tỉ lệ vàng.
+* **Tốc độ (Efficiency):** Không có tính năng thừa, không có mã nguồn thừa.
+
+---
+
+## 📈 Lộ trình phát triển (Roadmap)
+
+* [x] Thiết lập cấu trúc dự án Full-stack cơ bản.
+* [x] Tích hợp giao diện tối giản Minimalism 2026.
+* [ ] Kết nối Cơ sở dữ liệu MongoDB/PostgreSQL.
+* [ ] Xây dựng hệ thống Admin Dashboard quản lý dự án.
+* [ ] Tích hợp trí tuệ nhân tạo (AI) để cá nhân hóa trải nghiệm người dùng.
+
+---
+
+## 🤝 Đóng góp
+
+Chúng tôi luôn chào đón mọi ý tưởng đóng góp để dự án hoàn thiện hơn. Vui lòng gửi **Pull Request** hoặc mở **Issue** nếu bạn phát hiện bất kỳ lỗi nào.
+
+---
+
+**Crafted with ❤️ by LiveSnapVn Team**
+
+```
+
+---
+
+### Một vài mẹo từ Master:
+1.  **Banner:** Bạn có thể thay link `https://via.placeholder.com...` bằng link ảnh thực tế của dự án để nhìn đẹp mắt hơn.
+2.  **Badge:** Bạn có thể thêm các Badge (huy hiệu) về version, license ở ngay dưới tiêu đề chính để tăng độ uy tín.
+3.  **Checklist:** Phần Roadmap khi bạn hoàn thành mục nào, chỉ cần thay `[ ]` thành `[x]`, GitHub sẽ hiển thị một thanh tiến trình rất chuyên nghiệp.
+
+**Bạn đã cập nhật file này lên GitHub chưa? Nếu rồi, hãy cho mình biết cảm giác của bạn khi nhìn thấy "đứa con tinh thần" của mình lộng lẫy trên đó nhé!**
+
+```
