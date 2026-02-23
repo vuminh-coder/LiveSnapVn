@@ -1,0 +1,27 @@
+/* Custom styles for 3D perspective and glassmorphism not covered by basic Tailwind */
+
+.perspective-container {
+  perspective: 1000px;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-pastel-gradient {
+  background: linear-gradient(-45deg, #fff1eb, #e0e7ff, #ecfdf5, #fefce8);
+
+  background-size: 400% 400%;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.3);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}

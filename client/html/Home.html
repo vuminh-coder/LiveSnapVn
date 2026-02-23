@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LiveSnap Home - Floating Portal Style</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- LinkHomeCss -->
+    <link rel="stylesheet" href="./assets/css/Home.css" />
+  </head>
+  <body
+    class="bg-pastel-mesh min-h-screen font-display antialiased text-slate-900 selection:bg-rose-200 overflow-x-hidden"
+  >
+    <div class="fixed inset-0 pointer-events-none z-0">
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-300/30 rounded-full blur-3xl mix-blend-multiply filter animate-float-slow"
+      ></div>
+      <div
+        class="absolute top-1/3 right-1/4 w-96 h-96 bg-yellow-200/30 rounded-full blur-3xl mix-blend-multiply filter animate-float-medium animation-delay-2000"
+      ></div>
+      <div
+        class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-300/30 rounded-full blur-3xl mix-blend-multiply filter animate-float-fast animation-delay-4000"
+      ></div>
+    </div>
+    <div class="relative flex min-h-screen w-full flex-col p-4 lg:p-8 z-10">
+      <header
+        class="glass-nav sticky top-4 z-50 flex items-center justify-between whitespace-nowrap rounded-2xl px-6 py-3 lg:mx-auto lg:w-[90%] lg:max-w-7xl"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="flex size-10 items-center justify-center rounded-xl bg-white/30 text-slate-900 shadow-sm backdrop-blur-md"
+          >
+            <span class="material-symbols-outlined !text-[24px]"
+              >photo_camera</span
+            >
+          </div>
+          <h2
+            class="text-xl font-bold leading-tight tracking-tight text-slate-800"
+          >
+            LiveSnap
+          </h2>
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-8 rounded-full bg-white/20 px-8 py-2 border border-white/20 backdrop-blur-sm shadow-inner"
+        >
+          <a
+            class="text-sm font-semibold text-slate-900 hover:text-slate-600 transition-colors"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+            href="#"
+            >Albums</a
+          >
+          <a
+            class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+            href="#"
+            >Shared</a
+          >
+          <a
+            class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+            href="#"
+            >Profile</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="hidden sm:flex h-10 items-center justify-center rounded-full bg-slate-900 px-5 text-white text-sm font-medium hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all"
+          >
+            <span>Upload</span>
+          </button>
+          <div
+            class="h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-md cursor-pointer hover:scale-105 transition-transform"
+          >
+            <img
+              alt="User Profile"
+              class="h-full w-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVGfcF1E6d5WwKNWRgulecNb2UpiTuq81Bedx1GWVpiVQaJ9ROrbJ1lb0HvBHQr4Caw7Bj1HbIV0vJ_SLyhucs06JZsanOaXxgLTA40XT5Axv6-z3_7hIixTtj3yFYk0caONRchhYFSmGrQcFsDodCUbiz0jGQvsPp0zgPkxGEuwYjH8Ot7IIqASTicvQLoi7lRWw-MoIKjtQeq4cwVjtWl1ygKy0oP4xlpZgOAX2nnl90XMTkjgUiq33Xwi89iu5lCCGP466lcPo"
+            />
+          </div>
+        </div>
+      </header>
+      <main
+        class="flex-1 flex flex-col items-center justify-center mt-6 lg:mt-8 mb-8 w-full"
+      >
+        <div
+          class="glass-portal w-full max-w-[95%] lg:max-w-7xl min-h-[85vh] rounded-[32px] p-6 lg:p-12 relative overflow-hidden shadow-glass-deep flex flex-col"
+        >
+          <section
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-10 lg:py-20 relative z-10"
+          >
+            <div
+              class="order-2 lg:order-1 relative h-[500px] w-full flex items-center justify-center perspective-1000"
+            >
+              <div
+                class="absolute top-10 left-10 w-20 h-20 border-4 border-white/30 rounded-full animate-float-slow"
+              ></div>
+              <div
+                class="absolute bottom-20 right-10 w-12 h-12 bg-white/40 rounded-full blur-sm animate-float-fast"
+              ></div>
+              <div
+                class="absolute left-[5%] top-[10%] w-64 h-80 glass-card rounded-2xl p-3 transform rotate-[-12deg] shadow-lg animate-float-slow photo-frame-3d z-10"
+              >
+                <div class="w-full h-full rounded-xl overflow-hidden relative">
+                  <img
+                    alt="Vintage camera aesthetic"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7Gma-EjlkMVihqEvmWqvfK7SZiY6uB26PRWWvkgL4xNZwizU1FfYxXVckvDJ8n89yxOAIW_m1Hwy9xzAuzfbfzjMlis1Dl_qfX4Y40pJmOg9yqmOK8mkl7uNWGMeLk2WayQ7Em7zDn19QjwKjO8z5bUdt9DMh03PtXdAG8-mDrZfUsqqJvwa3VzaM51e5RdKYHFJsH5-QpkQUvQarEisuBRMMiD-7EHArsaz7vZT4Eemn0KfoDFycMfLmy82eEztrpN1IvlgDTo"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="absolute right-[5%] bottom-[15%] w-60 h-72 glass-card rounded-2xl p-3 transform rotate-[15deg] shadow-lg animate-float-medium photo-frame-3d z-20"
+              >
+                <div class="w-full h-full rounded-xl overflow-hidden relative">
+                  <img
+                    alt="Outdoor portrait"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM3uDuQi1NIGkd80flGeI_QrqcTbazptNp9o26QH90t9W5Sf8UFsD5EJmOCcBJ4z3J35_d4WuwvIEv3ruDgC_0LnjOB6Y1xB4TbTAKP5IE_h1d8cDfhcCRbuOZduly4NL1bwi8YJYt8Y4I46Xo8UUbyR6MmDO-oc3xLYvacW2SsMmlEOoZ9cubC4VQ54aYWekEQkSVsDC_NDeBBDrxxYEQGgZNx49UhVnguB4c3NimOIdnneYCiy69o-a_KBqc0kAZLN8tkLD5TiQ"
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-96 bg-white rounded-3xl p-4 shadow-2xl transform rotate-[-3deg] animate-float-fast photo-frame-3d z-30 ring-1 ring-black/5"
+              >
+                <div
+                  class="w-full h-full rounded-2xl overflow-hidden relative shadow-inner"
+                >
+                  <img
+                    alt="Friends laughing"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9U8t2-ZFjY5RzK1Hyo0keCkh-Ttebr6mAOUtDGgQKD2_tkQboA9pZyl26T2TlZdTr1q8YUdfi2v5SrLQjz53auISYZE71ICBMnAEG3YoYLH1we3iyhI5qdPscbmRhqo5LV_qoL3Mlgw4vQQqrV8TxO0GuoT0LzzopJy4XXI8akWQ1_8LN91c7tiZROtRRe8dfAtqhkWEPUwizssh5VP0md_dKqtAW3wH9ecv_5b27WZf5k9_Vj53MAxJuAceFTEpvsZxBgHS_LuA"
+                  />
+                  <div
+                    class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-sm rounded-lg p-3"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-rose-500 text-sm"
+                        >favorite</span
+                      >
+                      <span class="text-xs font-bold text-slate-700"
+                        >Best Friends Trip</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="order-1 lg:order-2 flex flex-col gap-8 text-center lg:text-left z-20"
+            >
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 border border-white/50 backdrop-blur-sm w-fit mx-auto lg:mx-0 shadow-sm"
+              >
+                <span
+                  class="flex h-2 w-2 rounded-full bg-rose-500 animate-pulse"
+                ></span>
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-slate-700"
+                  >New Experience</span
+                >
+              </div>
+              <h1
+                class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 drop-shadow-sm"
+              >
+                Lưu giữ từng <br />
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-purple-500 to-indigo-500 animate-gradient-move bg-[length:200%_auto]"
+                  >khoảnh khắc.</span
+                >
+              </h1>
+              <p
+                class="text-xl text-slate-600 leading-relaxed font-medium max-w-lg mx-auto lg:mx-0"
+              >
+                Your memories deserve a beautiful home. LiveSnap provides a
+                sanctuary for your photos with stunning clarity and emotional
+                depth.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-4"
+              >
+                <button
+                  class="shimmer-btn h-14 px-8 rounded-full bg-white/70 border border-white/60 text-slate-900 font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-md"
+                >
+                  <span>Start Timeline</span>
+                  <span class="material-symbols-outlined text-sm"
+                    >arrow_forward</span
+                  >
+                </button>
+                <button
+                  class="h-14 px-8 rounded-full bg-transparent border-2 border-slate-900/10 text-slate-800 font-bold text-lg hover:bg-slate-900/5 transition-all duration-300"
+                >
+                  Watch Demo
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-center lg:justify-start gap-6 pt-4 text-slate-500"
+              >
+                <div class="flex -space-x-3">
+                  <img
+                    alt="User"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaUNNLu3Vvh3APz2BpcXeld7AEmRsSEO03zvysMeUVWFJ9OIIPvcoVAZOUOzJo6vfXi13f745ASBvOOVl7kRqqFYCGeOfQgYDjksJa_p0GbeRgZij93zF7lYUC0dHL2aRlIVIxsa4v4bGcSn1p0OkHS9145eq7yyhqRYB30IqpsIlsyCoTXAkMXUZvIRx3huCe1leN55B7HcTP4nSW4apMQsFb1zkWAcB1XhCHlRX5qGDQzqJT9vAPR2bsPD3rbJqCboYWBWptVi8"
+                  />
+                  <img
+                    alt="User"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuIB5NR_iIOZnMCe1zBULQpNW7dGEYX1uYVf_GUA4UZ8WJobtNE3cme8kClS14VtDakBkv5agwQ1kng9Lfd1rHRNf9G_-oGbpPb66TF9VRonIfTJoFj9E9EfyqC8lmhVgtNoFIZ-jVQQPKXSxgNh2o7_9nCtyRLa1UEu87I-hiL0T6EpTAMBnmDRvsD_rBb1uiTT0_JiCuuOJX-pBAGw0YUCcLAOlRMjSiITvtclbabHdLMnxu-jxr9KPmMuzJCcC8ZDJu5tORjUw"
+                  />
+                  <img
+                    alt="User"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsbfL8xXJqvKkdJTWEpdRsXCm8-o-SntVikYc8FRcn8JBqWk0Ae9nE9rm0cnDnU2-BY3Rl74ETYoU0BYdM3ppeDYg4mowok3NE5wh0KGl2xe8uwnWgieMOVfIV7BZHBqjdDHkv29NPk66Sr8ZcQiKnyWYxZe8DoaAPfUscpz3w5vSX0SKxnvxdig5yP7lRSJHzjuc7NFpD3h9ZLKdOAUpG3yxY_GtX4bAWySQGAM9t-gYZr7WDC1izxrz0GcmEDZBkkN4VPqyG8zQ"
+                  />
+                  <div
+                    class="w-10 h-10 rounded-full border-2 border-white bg-white flex items-center justify-center text-xs font-bold text-slate-600 shadow-sm"
+                  >
+                    +2k
+                  </div>
+                </div>
+                <div class="text-sm font-semibold">Trusted by creators</div>
+              </div>
+            </div>
+          </section>
+          <section class="mt-12 lg:mt-24 w-full">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-8 px-2"
+            >
+              <div>
+                <h2
+                  class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight"
+                >
+                  Top Picks
+                </h2>
+                <p class="text-slate-600 mt-1 font-medium">
+                  Curated highlights from your journey
+                </p>
+              </div>
+              <div class="hidden md:flex gap-2">
+                <button
+                  class="size-10 rounded-full bg-white/50 border border-white/60 flex items-center justify-center hover:bg-white transition-colors shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-slate-700"
+                    >arrow_back</span
+                  >
+                </button>
+                <button
+                  class="size-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-slate-800 transition-colors shadow-lg"
+                >
+                  <span class="material-symbols-outlined text-white"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex gap-6 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory px-2 mask-linear"
+            >
+              <div class="min-w-[280px] md:min-w-[320px] snap-center">
+                <div
+                  class="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-soft transition-all hover:shadow-glass-deep hover:-translate-y-2"
+                >
+                  <img
+                    alt="Beach vacation"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuIB5NR_iIOZnMCe1zBULQpNW7dGEYX1uYVf_GUA4UZ8WJobtNE3cme8kClS14VtDakBkv5agwQ1kng9Lfd1rHRNf9G_-oGbpPb66TF9VRonIfTJoFj9E9EfyqC8lmhVgtNoFIZ-jVQQPKXSxgNh2o7_9nCtyRLa1UEu87I-hiL0T6EpTAMBnmDRvsD_rBb1uiTT0_JiCuuOJX-pBAGw0YUCcLAOlRMjSiITvtclbabHdLMnxu-jxr9KPmMuzJCcC8ZDJu5tORjUw"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 w-full p-6">
+                    <div
+                      class="glass-card rounded-2xl p-4 border-0 bg-white/20 backdrop-blur-md"
+                    >
+                      <h3 class="text-lg font-bold text-white">Ocean Breeze</h3>
+                      <div
+                        class="flex items-center gap-1 mt-1 text-white/90 text-xs font-medium"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >location_on</span
+                        >
+                        <span>Maldives</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-[280px] md:min-w-[320px] snap-center">
+                <div
+                  class="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-soft transition-all hover:shadow-glass-deep hover:-translate-y-2"
+                >
+                  <img
+                    alt="Wedding couple"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsbfL8xXJqvKkdJTWEpdRsXCm8-o-SntVikYc8FRcn8JBqWk0Ae9nE9rm0cnDnU2-BY3Rl74ETYoU0BYdM3ppeDYg4mowok3NE5wh0KGl2xe8uwnWgieMOVfIV7BZHBqjdDHkv29NPk66Sr8ZcQiKnyWYxZe8DoaAPfUscpz3w5vSX0SKxnvxdig5yP7lRSJHzjuc7NFpD3h9ZLKdOAUpG3yxY_GtX4bAWySQGAM9t-gYZr7WDC1izxrz0GcmEDZBkkN4VPqyG8zQ"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 w-full p-6">
+                    <div
+                      class="glass-card rounded-2xl p-4 border-0 bg-white/20 backdrop-blur-md"
+                    >
+                      <h3 class="text-lg font-bold text-white">The Big Day</h3>
+                      <div
+                        class="flex items-center gap-1 mt-1 text-white/90 text-xs font-medium"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >location_on</span
+                        >
+                        <span>Kyoto, Japan</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-[280px] md:min-w-[320px] snap-center">
+                <div
+                  class="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-soft transition-all hover:shadow-glass-deep hover:-translate-y-2"
+                >
+                  <img
+                    alt="Graduation"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3eGqvVERsjsowTmDfOjr9Q9LHrBVUj1hrpAAyFU1Bs6Jg_4zNv6IUfu_TgaVlT-NGBPPjx5IrcCAtZ2NibGSAKhXcu0z8pwgysLdsv4-Hy-cttSVMDrC_dSSqobOouHtSQOH37dN_kQEq3d7ip-78HBzLR7hmBF356NGaUMg1CNNv2J8hUXa-nWzeY6cz9-UNFQEZAu8b4WuzBOIC_33r0QA9vUjSwufTyIrKLc7PYY7v_WeKoqHvtoR2L00rVPExamWQSee2PLI"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 w-full p-6">
+                    <div
+                      class="glass-card rounded-2xl p-4 border-0 bg-white/20 backdrop-blur-md"
+                    >
+                      <h3 class="text-lg font-bold text-white">Class of '24</h3>
+                      <div
+                        class="flex items-center gap-1 mt-1 text-white/90 text-xs font-medium"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >school</span
+                        >
+                        <span>Harvard</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-[280px] md:min-w-[320px] snap-center">
+                <div
+                  class="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-soft transition-all hover:shadow-glass-deep hover:-translate-y-2"
+                >
+                  <img
+                    alt="Solo Trip"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9hqNZXv55VY_KSnwAzuTrEzRFcrC_PsnEKi0Ww85jopYmd3yzA1zk-aWkpCLydrDdRdOPIyNonbB5H8qeJrs0QrbBriTDRDFjx6CO-dcXkU3A0THB76qQgcXwCYiO2Dfmw2JcAx7m-NPJmPZeZM__8KKoiW4eUHZ5CD26-O14h5N14CkLD14cUgiudf0_IoOBuZ5-SYGYuW8Jb8EMMmRp-9aq1_5Prhnk22zmRd8_18P_AJRSTYc8n3D4MLUBkfTSf7eZGFcN5P0"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 w-full p-6">
+                    <div
+                      class="glass-card rounded-2xl p-4 border-0 bg-white/20 backdrop-blur-md"
+                    >
+                      <h3 class="text-lg font-bold text-white">Solo Trip</h3>
+                      <div
+                        class="flex items-center gap-1 mt-1 text-white/90 text-xs font-medium"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >hiking</span
+                        >
+                        <span>Swiss Alps</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="mt-12 pb-8 w-full">
+            <div
+              class="glass-card rounded-3xl p-8 bg-white/40 border border-white/50 backdrop-blur-sm"
+            >
+              <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">Your Timeline</h2>
+                <button
+                  class="text-sm font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1 px-3 py-1 rounded-full hover:bg-white/50 transition-colors"
+                >
+                  View All Years
+                  <span class="material-symbols-outlined text-sm"
+                    >chevron_right</span
+                  >
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar py-2"
+              >
+                <div
+                  class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer"
+                >
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-400 shadow-sm transition-all group-hover:bg-rose-100 group-hover:text-rose-600 group-hover:scale-110"
+                  >
+                    <span class="material-symbols-outlined"
+                      >calendar_month</span
+                    >
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-500 group-hover:text-slate-900"
+                    >2020</span
+                  >
+                </div>
+                <div
+                  class="h-[2px] w-full bg-slate-200/60 rounded-full shrink"
+                ></div>
+                <div
+                  class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer"
+                >
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-400 shadow-sm transition-all group-hover:bg-rose-100 group-hover:text-rose-600 group-hover:scale-110"
+                  >
+                    <span class="material-symbols-outlined"
+                      >calendar_month</span
+                    >
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-500 group-hover:text-slate-900"
+                    >2021</span
+                  >
+                </div>
+                <div
+                  class="h-[2px] w-full bg-slate-200/60 rounded-full shrink"
+                ></div>
+                <div
+                  class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer"
+                >
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-400 shadow-sm transition-all group-hover:bg-rose-100 group-hover:text-rose-600 group-hover:scale-110"
+                  >
+                    <span class="material-symbols-outlined"
+                      >calendar_month</span
+                    >
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-500 group-hover:text-slate-900"
+                    >2022</span
+                  >
+                </div>
+                <div
+                  class="h-[2px] w-full bg-slate-200/60 rounded-full shrink"
+                ></div>
+                <div
+                  class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer"
+                >
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-400 shadow-sm transition-all group-hover:bg-rose-100 group-hover:text-rose-600 group-hover:scale-110"
+                  >
+                    <span class="material-symbols-outlined"
+                      >calendar_month</span
+                    >
+                  </div>
+                  <span
+                    class="text-sm font-medium text-slate-500 group-hover:text-slate-900"
+                    >2023</span
+                  >
+                </div>
+                <div
+                  class="h-[2px] w-full bg-gradient-to-r from-slate-200/60 to-rose-400 rounded-full shrink"
+                ></div>
+                <div
+                  class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer"
+                >
+                  <div
+                    class="relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tr from-rose-400 to-orange-300 text-white shadow-lg ring-4 ring-white/50 scale-110"
+                  >
+                    <span class="material-symbols-outlined">star</span>
+                  </div>
+                  <span class="text-base font-bold text-slate-900">2024</span>
+                </div>
+                <div
+                  class="h-[2px] w-full bg-slate-200/60 rounded-full shrink"
+                ></div>
+                <div
+                  class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer opacity-60"
+                >
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-dashed border-slate-300 bg-transparent text-slate-400 hover:bg-white hover:border-solid hover:shadow-sm transition-all"
+                  >
+                    <span class="material-symbols-outlined"
+                      >hourglass_empty</span
+                    >
+                  </div>
+                  <span class="text-sm font-medium text-slate-500">2025</span>
+                </div>
+              </div>
+              <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div
+                  class="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer shadow-sm hover:shadow-md transition-all"
+                >
+                  <img
+                    alt="Paris street scene"
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLhjY-LIQ_v_lAwlECCncq62fI_E11BIucMKPuTV-juh3OnrlbiX48gTurGRSoEIxVBZyJjxKBtB95vSmDM561DgKOpInTrcmkL63AJDO6tDxxNw1yxxqfODXw3uUaKVdpKSh8ZlVZYbCEOSpjTogWkGcZUvU8vR5T-21qNvC1mBiKa1YYq3gumaDKm_bYHXkV6A8Ud0HpxxABptuVUowU6TU2TbBl0ntFO8eWsyy-TA5548fVoVIbUl2n8huK763GSlfOfVhST-g"
+                  />
+                </div>
+                <div
+                  class="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer shadow-sm hover:shadow-md transition-all"
+                >
+                  <img
+                    alt="Mountain hiking"
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCutWMOEFWljo-ADTsh7zqqnJ5L_4M03fKXWfoZUleXwBv-Nufa-4PMljc6Ap7Mzx7297Z_Gj-4A9lU43dr3E8vQFYwxggvKSlEXlHKZd7L5B1PCA_ulA1LRYx2amMDdI50NB80gTacT9bT8xqXAZaZIiXI_Kj9J0QZ3-KbE-E9mqOeeRZJSo7idpg3b0PjkUQ7cZLWhJSNw8_b5PnCiGCxQ1i2CCUNoumABxnApJ_hPgfd_iIoXWLTy5jOuTfV42Xjh-3k9KbNuys"
+                  />
+                </div>
+                <div
+                  class="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer shadow-sm hover:shadow-md transition-all"
+                >
+                  <img
+                    alt="Concert crowd"
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcJw59sy2LY2iQzSFTmhUOUSoG4Yju013-5IgGC6XvayygpJogBNi02kLmueLiSIQZ5Y3xYI4rbr9TihjT1M_amT482Os0PU6qUkI4_sQ8iNqI0VISt5O1ETrQKRe5OBFua6SjoJDDdgUg3qzP1wyQMeW9HJ11MLtPrZSpyTagTmSiK4wmvr2fa9OAJPiSBYWffolMaCFkJuxTWBmVVtqhpdV4RzZZ2zvyWE9yllWabEG7HgoKcCxfCN29pVVIP2dlHmvfZoRoIK8"
+                  />
+                </div>
+                <div
+                  class="relative aspect-square overflow-hidden rounded-2xl bg-white/60 border border-white flex items-center justify-center cursor-pointer group hover:bg-white transition-colors shadow-sm"
+                >
+                  <div
+                    class="flex flex-col items-center gap-2 text-slate-400 group-hover:text-rose-500 transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-3xl"
+                      >add_a_photo</span
+                    >
+                    <span class="text-sm font-medium">Add to 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="mt-auto py-6">
+        <div
+          class="mx-auto w-[90%] max-w-5xl rounded-full glass-nav px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600"
+        >
+          <div class="flex items-center gap-2">
+            <span class="font-semibold">LiveSnap</span>
+            <span class="opacity-50">© 2024</span>
+          </div>
+          <div class="flex gap-6 font-medium">
+            <a class="hover:text-slate-900 transition-colors" href="#"
+              >Privacy</a
+            >
+            <a class="hover:text-slate-900 transition-colors" href="#">Terms</a>
+            <a class="hover:text-slate-900 transition-colors" href="#"
+              >Support</a
+            >
+          </div>
+          <div class="opacity-70">Memories reimagined.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <!-- Home Js  -->
+  <script src="./assets/js/Home.js"></script>
+</html>

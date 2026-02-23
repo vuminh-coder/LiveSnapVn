@@ -1,0 +1,13 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.toggle-checkbox:checked {
+  right: 0;
+
+  border-color: #1782cf;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #1782cf;
+}

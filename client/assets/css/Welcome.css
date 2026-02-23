@@ -1,0 +1,43 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.mesh-gradient {
+  background-color: #f6f7f8;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(208, 80%, 92%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(220, 60%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(330, 80%, 96%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(208, 60%, 96%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 50%, hsla(260, 60%, 95%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(220, 80%, 93%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(208, 80%, 90%, 1) 0, transparent 50%);
+  background-size: 150% 150%;
+  animation: gradient-x 20s ease infinite;
+}
+
+/* Floating Label Logic */
+.floating-input:placeholder-shown + label {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.floating-input:not(:placeholder-shown) + label,
+.floating-input:focus + label {
+  opacity: 1;
+  transform: translateY(0);
+}
+.floating-input:not(:placeholder-shown),
+.floating-input:focus {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.shimmer-btn {
+  background: linear-gradient(to right, #1782cf 0%, #4facfe 50%, #1782cf 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+.shimmer-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
