@@ -105,3 +105,12 @@ body {
   left: 100%;
   transition: 0.7s ease-in-out;
 }
+
+@view-transition {
+  navigation: auto; /* Kích hoạt chuyển cảnh tự động khi điều hướng */
+}
+
+.login-avatar {
+  view-transition-name: user-avatar;
+  transition: all 1.5s ease;
+}

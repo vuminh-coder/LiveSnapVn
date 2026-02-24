@@ -1,0 +1,345 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LiveSnap Hub - Floating Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/FloatingPortal.css" />
+  </head>
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen gradient-bg"
+  >
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Top Navigation -->
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 glass-portal sticky top-0 z-50"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-primary">
+            <div
+              class="size-8 flex items-center justify-center bg-primary rounded-lg text-white"
+            >
+              <span class="material-symbols-outlined !text-2xl"
+                >auto_videocam</span
+              >
+            </div>
+            <h2
+              class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight"
+            >
+              LiveSnap
+            </h2>
+          </div>
+          <div class="hidden md:block">
+            <button
+              class="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 text-primary font-semibold text-sm"
+            >
+              <span class="material-symbols-outlined !text-lg">arrow_back</span>
+              Back to Home
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-1 justify-center max-w-lg mx-8">
+          <label class="flex flex-col w-full h-10">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-xl h-full glass-portal border-slate-200 dark:border-slate-700"
+            >
+              <div class="text-slate-500 flex items-center justify-center pl-4">
+                <span class="material-symbols-outlined !text-xl">search</span>
+              </div>
+              <input
+                class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 placeholder:text-slate-400 dark:placeholder:text-slate-500 px-4 text-sm font-normal"
+                placeholder="Search memories, people, or places..."
+              />
+            </div>
+          </label>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="flex size-10 items-center justify-center rounded-xl glass-portal text-slate-600 dark:text-slate-300"
+          >
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+          <button
+            class="flex size-10 items-center justify-center rounded-xl glass-portal text-slate-600 dark:text-slate-300"
+          >
+            <span class="material-symbols-outlined">settings</span>
+          </button>
+          <div class="bg-primary/20 p-0.5 rounded-full">
+            <img
+              alt="User Profile"
+              class="aspect-square rounded-full size-10 object-cover border-2 border-white dark:border-slate-800"
+              data-alt="Close up profile picture of a happy user"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ZatZHkt38F2aEpdJCfR9tvXhv8GJeNUwnT1eN2TbuYQByhxHUK5NGC64Wd158uaIaGU40THsxRwv8Bj-5yCOV-3l97Swk4g1Wnm0DTTvh89S4bh1g2ibdofCOoWZhS4FORd2YxIG01AxhiIVfZa82Bk5KlL_oSkDh_LNppilLMTXbnqVRuhLF_QGPb42_n3BJLLiZ7F-0tm32fdWNLfyHPQJfMkyk_R6bMEeb3Uiq12OPfFiEcugCqnyLXfAaChm-TYGM3cI0h0"
+            />
+          </div>
+        </div>
+      </header>
+      <!-- Main Hub Content -->
+      <main
+        class="flex-1 px-6 lg:px-20 py-12 flex flex-col items-center justify-center"
+      >
+        <div class="max-w-6xl w-full">
+          <div class="text-center mb-12">
+            <h1
+              class="text-slate-900 dark:text-white text-4xl md:text-5xl font-bold tracking-tight mb-4"
+            >
+              Floating Portal
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">
+              Navigate through your digital legacy and create new moments.
+            </p>
+          </div>
+          <!-- Grid Hub -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- My Memories -->
+            <div
+              class="group relative aspect-square rounded-3xl overflow-hidden glass-portal border-2 border-white/50 dark:border-slate-700/30 p-6 flex flex-col justify-between cursor-pointer hover:border-primary transition-all duration-300 shadow-xl shadow-primary/5"
+            >
+              <div
+                class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-cover bg-center"
+                data-alt="A diverse gallery of family photos and travel shots"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBr5ZvXHpjUFtFo5YVpi3bBeKJ78PKUU7SnOiGjeCfTLwU6SVb0he8Qjg9kYaICAP3yw0f-wMnMh_kEBeHv68XHpQ9AO2aviyBmy8a7zMvDJSmEiABy3MNApveNqaZZb23WHQkoi2Qs8eEu41GL49aTi7WxEyQPoqeyFLjQmDljdlP5GsYFIjpDyN57GG3qLfB-qkspzkVISsRemU0HkUnyY4oE6XngmbY2Rke-oNbXfjwA1DKB1mD-6u5DcSB8mn6kTc3UZMIEQnk&quot;);
+                "
+              ></div>
+              <div class="relative z-10 flex justify-between items-start">
+                <div
+                  class="size-14 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg shadow-primary/30"
+                >
+                  <span class="material-symbols-outlined !text-3xl"
+                    >photo_library</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-slate-400"
+                  >north_east</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  My Memories
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                >
+                  Explore your personal gallery organized by time, people, and
+                  events.
+                </p>
+              </div>
+            </div>
+            <!-- AI Storyteller -->
+            <div
+              class="group relative aspect-square rounded-3xl overflow-hidden glass-portal border-2 border-white/50 dark:border-slate-700/30 p-6 flex flex-col justify-between cursor-pointer hover:border-primary transition-all duration-300 shadow-xl shadow-primary/5"
+            >
+              <div
+                class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-cover bg-center"
+                data-alt="Abstract glowing particles representing artificial intelligence storytelling"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD7DcZ4cZy2WqrWLHXg5PZjyjUh3FjZgaKWSQMDtXxgxhA5hqeRlcQ5d3jzmaOnS-08p2TxPnnsd2i0fsO1cB1tZ87umwZdHB6pBzx3enBDROENSIaBtaCI2xiVBf2ZW_cmckTgI-IaAKBLERmQoQrBaTpl6vJLHoRNlX9Xd3VE_-XuUche6QamuNW-2Ur7HkJhKT0cUt3pYJj3L1el_Q_ysxy6Yvwkj82QOFrzJdDf63YM0J6q62TKJessVbY_OkyH1EpgLh6IOAo&quot;);
+                "
+              ></div>
+              <div class="relative z-10 flex justify-between items-start">
+                <div
+                  class="size-14 bg-indigo-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/30"
+                >
+                  <span class="material-symbols-outlined !text-3xl"
+                    >auto_stories</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-slate-400"
+                  >north_east</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  AI Storyteller
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                >
+                  Let AI weave your photos into beautiful cinematic narratives
+                  automatically.
+                </p>
+              </div>
+            </div>
+            <!-- Global Map -->
+            <div
+              class="group relative aspect-square rounded-3xl overflow-hidden glass-portal border-2 border-white/50 dark:border-slate-700/30 p-6 flex flex-col justify-between cursor-pointer hover:border-primary transition-all duration-300 shadow-xl shadow-primary/5"
+            >
+              <div
+                class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity bg-cover bg-center"
+                data-alt="A stylized digital world map with glowing memory pins"
+                data-location="World Map"
+                style="
+                  background-image: url(&quot;https://placeholder.pics/svg/300&quot;);
+                "
+              ></div>
+              <div class="relative z-10 flex justify-between items-start">
+                <div
+                  class="size-14 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30"
+                >
+                  <span class="material-symbols-outlined !text-3xl"
+                    >public</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-slate-400"
+                  >north_east</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  Global Map
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                >
+                  Relive your adventures by exploring memories mapped across the
+                  globe.
+                </p>
+              </div>
+            </div>
+            <!-- Family Space -->
+            <div
+              class="group relative aspect-square rounded-3xl overflow-hidden glass-portal border-2 border-white/50 dark:border-slate-700/30 p-6 flex flex-col justify-between cursor-pointer hover:border-primary transition-all duration-300 shadow-xl shadow-primary/5"
+            >
+              <div
+                class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-cover bg-center"
+                data-alt="Group of multi-generational family members smiling together"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCVoq7AamXruhdSdC2QV_nJtH0PD1KsEgGFkxGOB5IE1VmXeCFR9L_4rhAz2qSxrcGPdFmHg6KoooUqbYWYNg4lPQArNp6F5WdQPCW2G2B4uxIfr6Fk4qr6YqkqgN9BrCrdVSlJL57V0iAfu3GCyPsb1SpNMVC1GlPK05C71YDLQCuLZqYR25CRUQrxfiRJbnmobadzfLt-UShc9gLNNpXOJ2t0y3BiSUwij_k4B5aBsg8hHYDr9D3XpaZM2NC13p1bjlHLvSYWC40&quot;);
+                "
+              ></div>
+              <div class="relative z-10 flex justify-between items-start">
+                <div
+                  class="size-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-amber-500/30"
+                >
+                  <span class="material-symbols-outlined !text-3xl"
+                    >groups</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-slate-400"
+                  >north_east</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  Family Space
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                >
+                  A private collaborative vault for sharing and preserving
+                  family legacy.
+                </p>
+              </div>
+            </div>
+            <!-- Print Studio -->
+            <div
+              class="group relative aspect-square rounded-3xl overflow-hidden glass-portal border-2 border-white/50 dark:border-slate-700/30 p-6 flex flex-col justify-between cursor-pointer hover:border-primary transition-all duration-300 shadow-xl shadow-primary/5"
+            >
+              <div
+                class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity bg-cover bg-center"
+                data-alt="Elegant physical photo albums and printed canvases"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCiHOQaNx0oLxrUtzA8SPzduc69FL5eX4Sm_O38tnNUS4rX-kXc3GU6JAiaVGdhbWxYxzLOSPwGqBgbA-Rk_mgwOJsZGsNf1nL4UGGlemEFVX3qp3c_ocT_gyyM6la8TKuwMhq9H3LWR09T_1er6nBBzqZjoqjQ2r8Ru-OSSSAN3IvzIhU5JqcwMHUjDABoTKQEpD4pHuYSUVcL0z21J-TdVH8GVVIh4Cw1wG7uu0OHyHwyg_tLa7Q00BEVxLCq1kLdU4nysKJ7dt4&quot;);
+                "
+              ></div>
+              <div class="relative z-10 flex justify-between items-start">
+                <div
+                  class="size-14 bg-rose-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-rose-500/30"
+                >
+                  <span class="material-symbols-outlined !text-3xl">print</span>
+                </div>
+                <span class="material-symbols-outlined text-slate-400"
+                  >north_east</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  Print Studio
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                >
+                  Turn digital snaps into high-quality prints, albums, and
+                  gifts.
+                </p>
+              </div>
+            </div>
+            <!-- Add New / Custom -->
+            <div
+              class="group relative aspect-square rounded-3xl overflow-hidden glass-portal border-2 border-dashed border-slate-300 dark:border-slate-700 p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary transition-all duration-300"
+            >
+              <div
+                class="size-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors mb-4"
+              >
+                <span class="material-symbols-outlined !text-4xl">add</span>
+              </div>
+              <h3
+                class="text-lg font-semibold text-slate-600 dark:text-slate-400"
+              >
+                Custom Connection
+              </h3>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Footer / Secondary Nav -->
+      <footer
+        class="px-6 lg:px-20 py-8 border-t border-slate-200 dark:border-slate-800 glass-portal"
+      >
+        <div
+          class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex gap-8">
+            <a
+              class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+              href="#"
+              >Terms of Service</a
+            >
+            <a
+              class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+              href="#"
+              >Support</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <p class="text-sm text-slate-500">
+              © 2024 LiveSnap Hub. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../assets/js/FloatingPortal.js"></script>
+</html>

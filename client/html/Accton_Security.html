@@ -1,0 +1,485 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link rel="stylesheet" href="../assets/css/Accton_Security.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <div class="relative flex h-screen w-full overflow-hidden">
+      <!-- Sidebar Navigation -->
+      <aside
+        class="w-72 border-r border-primary/10 bg-white/40 dark:bg-background-dark/40 backdrop-blur-md flex flex-col h-full"
+      >
+        <div class="p-6 flex items-center gap-3">
+          <div class="bg-primary rounded-lg p-2 text-white">
+            <span class="material-symbols-outlined">shield_person</span>
+          </div>
+          <h2
+            class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
+          >
+            SafeGuard
+          </h2>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-white font-medium transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Overview</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">account_circle</span>
+            <span>Profile &amp; Stats</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">lock</span>
+            <span>Privacy Vault</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">security</span>
+            <span>Advanced Security</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">card_membership</span>
+            <span>Subscription</span>
+          </a>
+        </nav>
+        <div class="p-4 mt-auto border-t border-primary/10">
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-primary/5">
+            <div
+              class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden"
+            >
+              <img
+                class="w-full h-full object-cover"
+                data-alt="User profile avatar male portrait"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzFSpAWCa5gCFhLf5uaY_MppBsH5IX3QlXxzyDLYz6ol5zsLuKsWMT3ErsdlYdZjT3xcNHMdkr59P6swsXmGGIhnvPHcug38Q3dDsyPCohutt9ihh8epdoQEFkgbNf_FCzCGcZJ4VIo43-WnuyF9iI5sswcj8diEpYR2wSWdsPIUouFu7t2veolkzjjTWqO3v5WVrOQKUbrkA9_HwElA7M9s-QhW6SsRPJjhHjQ8nsOIPEwP8WJdmHjrIIGwzALJmzNuM1xqALyRw"
+              />
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-semibold truncate">Alex Rivera</p>
+              <p class="text-xs text-primary font-medium uppercase">
+                Premium Plan
+              </p>
+            </div>
+            <button class="text-slate-400 hover:text-primary">
+              <span class="material-symbols-outlined">logout</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content Area -->
+      <main
+        class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark"
+      >
+        <!-- Header -->
+        <header
+          class="sticky top-0 z-10 flex items-center justify-between px-10 py-5 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10"
+        >
+          <div>
+            <h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
+              Account &amp; Security Center
+            </h1>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Manage your identity and protection settings
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 relative"
+            >
+              <span class="material-symbols-outlined">notifications</span>
+              <span
+                class="absolute top-2 right-2 h-2 w-2 bg-primary rounded-full"
+              ></span>
+            </button>
+            <button
+              class="flex items-center gap-2 px-4 py-2 bg-primary text-white font-bold rounded-xl text-sm"
+            >
+              <span class="material-symbols-outlined text-[20px]">upgrade</span>
+              <span>Manage Plan</span>
+            </button>
+          </div>
+        </header>
+        <div class="p-10 max-w-6xl mx-auto space-y-8">
+          <!-- Top Status Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-primary/10 shadow-sm flex items-center gap-5"
+            >
+              <div
+                class="h-14 w-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >verified_user</span
+                >
+              </div>
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Security Score
+                </p>
+                <p class="text-2xl font-bold">94/100</p>
+              </div>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-primary/10 shadow-sm flex items-center gap-5"
+            >
+              <div
+                class="h-14 w-14 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary"
+              >
+                <span class="material-symbols-outlined text-3xl">key</span>
+              </div>
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Active Passkeys
+                </p>
+                <p class="text-2xl font-bold">4 Devices</p>
+              </div>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-primary/10 shadow-sm flex items-center gap-5"
+            >
+              <div
+                class="h-14 w-14 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600"
+              >
+                <span class="material-symbols-outlined text-3xl">history</span>
+              </div>
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Last Login
+                </p>
+                <p class="text-lg font-bold">2 mins ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- Main Navigation Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Profile & Stats -->
+            <div
+              class="group p-8 rounded-3xl bg-white/50 dark:bg-slate-900/50 border border-primary/5 hover:border-primary/20 backdrop-blur-sm transition-all shadow-lg hover:shadow-xl"
+            >
+              <div class="flex justify-between items-start mb-6">
+                <div
+                  class="h-12 w-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <span
+                  class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 uppercase"
+                  >View Activity</span
+                >
+              </div>
+              <h3 class="text-xl font-bold mb-2">Profile &amp; Performance</h3>
+              <p class="text-slate-500 dark:text-slate-400 mb-6">
+                Monitor your account activity trends and manage your public
+                identity presence.
+              </p>
+              <div
+                class="bg-slate-100 dark:bg-slate-800 rounded-xl p-4 flex justify-between items-center mb-6"
+              >
+                <div class="flex -space-x-2">
+                  <div
+                    class="h-8 w-8 rounded-full border-2 border-white bg-slate-300"
+                  ></div>
+                  <div
+                    class="h-8 w-8 rounded-full border-2 border-white bg-slate-400"
+                  ></div>
+                  <div
+                    class="h-8 w-8 rounded-full border-2 border-white bg-slate-500"
+                  ></div>
+                </div>
+                <span class="text-sm text-slate-500">12 Recent Sessions</span>
+              </div>
+              <button
+                class="w-full py-3 rounded-xl border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all"
+              >
+                Go to Stats
+              </button>
+            </div>
+            <!-- Privacy Vault -->
+            <div
+              class="group p-8 rounded-3xl bg-white/50 dark:bg-slate-900/50 border border-primary/5 hover:border-primary/20 backdrop-blur-sm transition-all shadow-lg hover:shadow-xl"
+            >
+              <div class="flex justify-between items-start mb-6">
+                <div
+                  class="h-12 w-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">encrypted</span>
+                </div>
+                <span
+                  class="text-xs font-bold px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 uppercase"
+                  >Secure</span
+                >
+              </div>
+              <h3 class="text-xl font-bold mb-2">Privacy Vault</h3>
+              <p class="text-slate-500 dark:text-slate-400 mb-6">
+                Access your encrypted storage. Manage private keys and sensitive
+                personal documentation.
+              </p>
+              <div
+                class="h-24 w-full bg-gradient-to-r from-purple-100/50 to-primary/5 dark:from-purple-900/20 dark:to-primary/10 rounded-xl mb-6 relative overflow-hidden flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-purple-400 opacity-50"
+                  >folder_zip</span
+                >
+              </div>
+              <button
+                class="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-md shadow-primary/20"
+              >
+                Unlock Vault
+              </button>
+            </div>
+            <!-- Subscription Plans -->
+            <div
+              class="group p-8 rounded-3xl bg-slate-900 text-white border border-primary/30 transition-all shadow-2xl relative overflow-hidden"
+            >
+              <div
+                class="absolute -right-10 -top-10 h-40 w-40 bg-primary/20 rounded-full blur-3xl"
+              ></div>
+              <div class="relative z-10">
+                <div class="flex justify-between items-start mb-6">
+                  <div
+                    class="h-12 w-12 rounded-xl bg-primary text-white flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined"
+                      >workspace_premium</span
+                    >
+                  </div>
+                  <span
+                    class="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-primary uppercase"
+                    >Active</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold mb-2">Subscription Plans</h3>
+                <p class="text-slate-400 mb-6">
+                  You are currently on the
+                  <span class="text-primary font-bold italic"
+                    >Premium Secure</span
+                  >
+                  plan. Next billing on Oct 24.
+                </p>
+                <ul class="space-y-3 mb-8">
+                  <li class="flex items-center gap-2 text-sm">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    Unlimited Device Protection
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check_circle</span
+                    >
+                    24/7 Priority Support
+                  </li>
+                </ul>
+                <button
+                  class="w-full py-3 rounded-xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition-all"
+                >
+                  Manage Subscription
+                </button>
+              </div>
+            </div>
+            <!-- Advanced Security -->
+            <div
+              class="group p-8 rounded-3xl bg-white/50 dark:bg-slate-900/50 border border-primary/5 hover:border-primary/20 backdrop-blur-sm transition-all shadow-lg hover:shadow-xl"
+            >
+              <div class="flex justify-between items-start mb-6">
+                <div
+                  class="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">passkey</span>
+                </div>
+                <span
+                  class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 uppercase"
+                  >Enabled</span
+                >
+              </div>
+              <h3 class="text-xl font-bold mb-2">Advanced Security</h3>
+              <p class="text-slate-500 dark:text-slate-400 mb-6">
+                Configure 2FA, hardware passkeys, and biometric authentication
+                protocols.
+              </p>
+              <div class="flex gap-4 mb-8">
+                <div
+                  class="flex-1 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 flex flex-col items-center"
+                >
+                  <span
+                    class="text-xs font-bold text-emerald-600 uppercase mb-1"
+                    >Passkey</span
+                  >
+                  <span class="text-xs text-emerald-500">Active</span>
+                </div>
+                <div
+                  class="flex-1 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 flex flex-col items-center"
+                >
+                  <span
+                    class="text-xs font-bold text-emerald-600 uppercase mb-1"
+                    >2FA App</span
+                  >
+                  <span class="text-xs text-emerald-500">Active</span>
+                </div>
+                <div
+                  class="flex-1 p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex flex-col items-center"
+                >
+                  <span class="text-xs font-bold text-slate-400 uppercase mb-1"
+                    >SMS</span
+                  >
+                  <span class="text-xs text-slate-400">Disabled</span>
+                </div>
+              </div>
+              <button
+                class="w-full py-3 rounded-xl border border-primary/30 text-slate-700 dark:text-slate-200 font-bold hover:bg-primary/5 transition-all"
+              >
+                Security Settings
+              </button>
+            </div>
+          </div>
+          <!-- Active Logins Table -->
+          <div
+            class="bg-white dark:bg-slate-900 rounded-3xl border border-primary/10 shadow-sm overflow-hidden"
+          >
+            <div
+              class="p-6 border-b border-primary/5 flex justify-between items-center"
+            >
+              <h3 class="text-lg font-bold">Active Sessions</h3>
+              <button class="text-primary text-sm font-bold hover:underline">
+                Log out all devices
+              </button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead
+                  class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 text-xs uppercase tracking-wider"
+                >
+                  <tr>
+                    <th class="px-6 py-4">Device / Browser</th>
+                    <th class="px-6 py-4">Location</th>
+                    <th class="px-6 py-4">Status</th>
+                    <th class="px-6 py-4">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-primary/5">
+                  <tr class="hover:bg-primary/5 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-slate-400"
+                          >desktop_windows</span
+                        >
+                        <div>
+                          <p class="font-semibold text-sm">
+                            MacBook Pro (Chrome)
+                          </p>
+                          <p class="text-xs text-slate-400">Current Session</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm">San Francisco, USA</td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 text-[10px] font-bold uppercase tracking-wide"
+                        >Online</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <button class="text-slate-400 hover:text-red-500">
+                        <span class="material-symbols-outlined text-sm"
+                          >close</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-primary/5 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-slate-400"
+                          >smartphone</span
+                        >
+                        <div>
+                          <p class="font-semibold text-sm">
+                            iPhone 15 Pro (App)
+                          </p>
+                          <p class="text-xs text-slate-400">Active 1h ago</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm">Austin, TX</td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-wide"
+                        >Standby</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <button class="text-slate-400 hover:text-red-500">
+                        <span class="material-symbols-outlined text-sm"
+                          >close</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Branding -->
+        <footer class="p-10 text-center">
+          <p class="text-xs text-slate-400 uppercase tracking-[0.2em] mb-4">
+            Secured by SafeGuard Multi-Layer Encryption
+          </p>
+          <div
+            class="flex justify-center gap-6 opacity-30 grayscale contrast-200"
+          >
+            <img
+              class="h-6"
+              data-alt="Security certification badge 1"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzBzoEwHHgt2Mk1s2G0U3bB2NuXOSX6Ld7uMgXPCGlUOC7BPzH1RAsFGsekpTMO7-jPA4A00WYbHKvJADu_JlX9fsPVILD-WoLjC6giWVXnj7446lbvPdDSUZzAxu0x8ycp4rx-nkLO2nkr3BCPE32nuF_D0VKh-ZUKZHpJmSZ8GW0U-45_O9X0jN905TUnI_5RpjcnV9puqDPj-luYlF8Z4xiBo50LyZym3V00-suzVo8MW-3fnOlIbYTVbhCkmz-baG1xZdmSjc"
+            />
+            <img
+              class="h-6"
+              data-alt="Security certification badge 2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH4gf_bJjPPOqBgxwjElCxPU47C-S--zQVFbi259YqiE3EV6EnAQCMaIPo3o1Vn2y2cboEqqFSfjGK-8rK2vnePCdwwTUOasUeSuc3hVGTZkElLRYCV6N9jRpoVUJWjvOmd9jbjBt7QnV-GN30e8oPcFgMk6Bp4728x8osNtK99uPNzP8MAI4VhiiUVXiaRMikV3MxeWRO-U6BW6F_WNEOe_it6oG3vld8Wk06gb9EHOTCS8wpBBME8XHJhphDpvYwdLv3RKRH3ms"
+            />
+            <img
+              class="h-6"
+              data-alt="Security certification badge 3"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOJA5q_wOsuC_cuAdkWF26jygLS_k5b4S_y7luMaZkEqUvoBlkdA4pd34s1CVKstfGEob71qmgwSHu689copyhicV-yFWJoHtgnt6Gh-DLpGK_EkpxDKGtEJJUcEopHRXRuzesoXvxxLGSqBPfhAffJceRGCvaPNMIboprQHsGx70paXpnlaHcrUahgH2Dd0GheuPY23BVmJniCDqzSDlys2cwp1pD_x0Aib__yb0FyGx3voQO_ebLDA2BN1sd4Yh48wCpNlj5IF0"
+            />
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+  <script src="../assets/js/Accton_Security.js"></script>
+</html>

@@ -1,0 +1,442 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Memory Directory</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/Memories.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Top Navigation -->
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-primary">
+            <span class="material-symbols-outlined text-3xl font-bold"
+              >grid_view</span
+            >
+            <h2
+              class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight"
+            >
+              Memory Directory
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors"
+              href="#"
+              >Gallery</a
+            >
+            <a
+              class="text-primary text-sm font-semibold border-b-2 border-primary"
+              href="#"
+              >Collections</a
+            >
+            <a
+              class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors"
+              href="#"
+              >Shared</a
+            >
+          </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-4 items-center">
+          <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+            <div
+              class="flex w-full flex-1 items-stretch rounded-xl h-full bg-slate-200/50 dark:bg-slate-800/50 border border-slate-300/50 dark:border-slate-700/50"
+            >
+              <div class="text-slate-500 flex items-center justify-center pl-4">
+                <span class="material-symbols-outlined text-xl">search</span>
+              </div>
+              <input
+                class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 placeholder:text-slate-500 px-3 text-sm"
+                placeholder="Find a memory..."
+                value=""
+              />
+            </div>
+          </label>
+          <button
+            class="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-all"
+          >
+            <span class="material-symbols-outlined text-xl">settings</span>
+          </button>
+          <div
+            class="h-10 w-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="User avatar of a young man"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4OyvZMgpWJKVed_XzWwWJCDxG2Yt1EtSHwAhCw1x23Ss3NtDHB_bl7g5rE_QRjpWFdX_rwmgkGBmLHmCgYkkIHokhWJf5VN_pqKAHiwzbCRzUI52KYDSitZQDZZpeknWbcMg-qhPZmMYbs8GIfao42SpulnNUzFEgupN9D-VK_A3WjNJWX1Y5DTw__L_4aWkrl2lg0FRgoZ3Hrcrfcx0hABZb7KUVOqWRlIoDwsgxJqXxLGcllx_XnhkLtIs91h4EFsm4i0NhJE"
+            />
+          </div>
+        </div>
+      </header>
+      <main
+        class="flex-1 max-w-[1280px] mx-auto w-full px-6 lg:px-20 py-10 space-y-12"
+      >
+        <!-- Hero Section -->
+        <section
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200 dark:border-slate-800 pb-10"
+        >
+          <div class="space-y-2">
+            <h1
+              class="text-4xl md:text-5xl font-black text-slate-900 dark:text-slate-100 tracking-tight"
+            >
+              Your Narrative
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">
+              Organizing your life's moments through time and emotion.
+            </p>
+          </div>
+          <div class="flex gap-3">
+            <button
+              class="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-bold text-sm shadow-lg shadow-primary/25 hover:opacity-90 transition-all"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >cloud_upload</span
+              >
+              Import Photos
+            </button>
+          </div>
+        </section>
+        <!-- Chronological Section -->
+        <section class="space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary"
+                >calendar_month</span
+              >
+              <h2 class="text-2xl font-bold tracking-tight">Chronological</h2>
+            </div>
+            <button class="text-primary font-semibold text-sm hover:underline">
+              View all years
+            </button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Year Cards -->
+            <div
+              class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                data-alt="Scenic landscape from summer 2023"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA9VzWm6-OdLLoHWeD1RJXFX6oX4ZlmvtTYxzhV5FxGVsyY05SOAHOdClidSPH9DMXZA7Da4mptIS4wGjiJLKKIGOjOHgLZma2S9GnCAX4ygaLI2nOp_xx3cMI7ca4LaeYzDJHo8ZUGzZ9Y8uxXyGd_u2U4kwT74LmoKjWVh9gYgvqIUFwOnCOJlnbADpO4QvZ77ySwboSlG8W9pY368xGuAnGbfBxy11wQKJKe77DpwRwWQU2qgUHTFOOnloxLZZLr--r7BNnXBZg&quot;);
+                "
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 p-6 w-full backdrop-blur-sm bg-white/10 border-t border-white/20"
+              >
+                <p class="text-white text-xl font-bold">2023</p>
+                <p class="text-white/70 text-sm">1,240 moments captured</p>
+              </div>
+            </div>
+            <div
+              class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                data-alt="Lake reflections from 2022"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAYNhv5n6aiQ9hGzm7DEWxJeXA7FYvNmopV6rS65SQHOlW9F1vkdSbzZLHG7Xu3c3kUF3BR5ZkWbetYJz0DHrumJPimRqLglEcymrVWpZ_sS1q1b1UPfHsVwnZRk0VU8Qm2CJrINL1hss8SmDN-lIFJ2Wt7DH54QLY0lZcH5BtsQQu54GbqejK1O9BgzcJ1zo1tcmZxnKGTi3RVTqtsQ_OxB7DBu45GpRqDxmd_NI14JIzVlSvpdADxgh3B6L3dCFYXIy-nO8xsOuw&quot;);
+                "
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 p-6 w-full backdrop-blur-sm bg-white/10 border-t border-white/20"
+              >
+                <p class="text-white text-xl font-bold">2022</p>
+                <p class="text-white/70 text-sm">980 moments captured</p>
+              </div>
+            </div>
+            <div
+              class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                data-alt="Mountain view from 2021"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA0WtFlUAcn7R3evDuJrRdzroJDKcE8VS8omePXAJGB4-WsbqKkjddyhlOndSV-KHFWDEh8jcFYtZTnRgb5YvHk5EZ7NqPaGAKE9WmWp4lbQZaKXp6aOAK0V6uzbUdNl-5EEf0BsC6HfQ67lgRjLN_nf-3o7xHEWntS_9XR7vMh2v_m49nQLx3yQ0IQVE0MsvnBx3O_urXKhshk9wyNyMPYLrloOLywL4wGqtQ24E5mEItblSwshu7bHcFwokPZqTmn9pzt30hYqYo&quot;);
+                "
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 p-6 w-full backdrop-blur-sm bg-white/10 border-t border-white/20"
+              >
+                <p class="text-white text-xl font-bold">2021</p>
+                <p class="text-white/70 text-sm">1,560 moments captured</p>
+              </div>
+            </div>
+            <div
+              class="group relative aspect-[3/4] rounded-xl overflow-hidden cursor-pointer"
+            >
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                data-alt="Coastal road from 2020"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCtszu0a2IbkzB2ZiJWK9Zz5xUgTxNS7rl5SxYUXvQB_vXAb2ytFdzF4e0AYIyb-EUnwhbWz1HIe-UqDAItZ5WDfkmsrcYoET7r77YlHGNyzen7nk9IGfD9-TZbxveckbSXF9rZrwVvaBkEGitxxIM6CbFsCkDycaMsl0X6YQFU2I0EXXMktb4nssssKYm_E_mIXpZvUSH74hE1pi-EOgSt_kCrs7aSxQMEtvNSbmENAoF-leY4WDihPBLQeNR3ZS2N_44MUjB9hEQ&quot;);
+                "
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 p-6 w-full backdrop-blur-sm bg-white/10 border-t border-white/20"
+              >
+                <p class="text-white text-xl font-bold">2020</p>
+                <p class="text-white/70 text-sm">820 moments captured</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Thematic Smart Albums -->
+        <section class="space-y-6">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary"
+              >auto_awesome</span
+            >
+            <h2 class="text-2xl font-bold tracking-tight">Smart Collections</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="p-6 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center gap-5 hover:border-primary/50 transition-all cursor-pointer group"
+            >
+              <div class="h-20 w-20 rounded-lg overflow-hidden shrink-0">
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="Airplane wing over clouds"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6S3IGfImLWwffbMnnJPNqWCdRJztkVwajA3Bo-B_WJWamVeb3ZiYzN4GaNEgY2mJnHPInhyQJdFMqyc6p0j3a4oOE4yRvBRYSBZAyVefKEmnhDtZRgKfBLJko20FOUoejXaG1kJn8JcygE_XHd986pMJ2uxr8_9jJh4UGp1fj1p6XXIFgiiNrG3-jKQJrVqYKkOAJK7beSAk2lMXQG3PPy3kPOX2k3BUpleoYDjsnzOTeQUodp-XEJl6NDB1vQLPfuRbcqpnimQ"
+                />
+              </div>
+              <div class="flex-1">
+                <p
+                  class="font-bold text-lg group-hover:text-primary transition-colors"
+                >
+                  Travel Adventures
+                </p>
+                <p class="text-slate-500 text-sm italic">
+                  42 locations visited
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-slate-400"
+                >chevron_right</span
+              >
+            </div>
+            <div
+              class="p-6 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center gap-5 hover:border-primary/50 transition-all cursor-pointer group"
+            >
+              <div class="h-20 w-20 rounded-lg overflow-hidden shrink-0">
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="Family gathering around a dinner table"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ3sko-XboWdo4-DnWb1TfIiAOwyP_KvH5WqYOAT8yCMFGu-QpsCaPfC5kZzRQe7EK9AJBIbA6s4dwnS5IrN9I8WuxWP6qUC2cYBZjrRyCt0wGKjrEtkCyhe0xAObkk5dTpdpTo18xp_Lsy_DaRAS1wHWJAXuHS_HFJ7qKwi5jTEV3We3SVVhQ10Vc_bDBx4nfMLKzhp0mIAlfLdsPp1TkV4d87Cz7h8Q7AbrdvFNX0CJdNTAz7N3aQRVGXm26ne8-vrkP0-EPifk"
+                />
+              </div>
+              <div class="flex-1">
+                <p
+                  class="font-bold text-lg group-hover:text-primary transition-colors"
+                >
+                  Family &amp; Friends
+                </p>
+                <p class="text-slate-500 text-sm italic">
+                  Face tagging enabled
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-slate-400"
+                >chevron_right</span
+              >
+            </div>
+            <div
+              class="p-6 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 shadow-sm flex items-center gap-5 hover:border-primary/50 transition-all cursor-pointer group"
+            >
+              <div class="h-20 w-20 rounded-lg overflow-hidden shrink-0">
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="Portrait photography close-up"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuArQrGD3F7Lp3EJworD1mxGunddeVCXTfeNVSMKd8oaO5UpGw1HSqz8U4taxpSSOmTZoQZU8SqyeP1tO7p08uytrjWrOx4kfv_O91HgDtF8vXSSY5KGJBnC3Dh6D1_Qe_fxUZ2qLux6HtbfAk5vnMAIvSyku_lNp8HoHoRGfkRR_GEs6fciFydxmqstk_5QG7qVi3Jm_6IQh6xQLvtIcaAJ7M686IfRxvdJUHloVOQwegFmrzvCqGPvfyjST5Wyjf83fZbhs1dOFqk"
+                />
+              </div>
+              <div class="flex-1">
+                <p
+                  class="font-bold text-lg group-hover:text-primary transition-colors"
+                >
+                  Portraits
+                </p>
+                <p class="text-slate-500 text-sm italic">
+                  Bokeh &amp; Studio effects
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-slate-400"
+                >chevron_right</span
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Mood-based Filters -->
+        <section class="space-y-6">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">mood</span>
+            <h2 class="text-2xl font-bold tracking-tight">
+              Mood-based Curation
+            </h2>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="flex items-center gap-3 px-6 py-4 rounded-full bg-yellow-400/10 border border-yellow-400/20 text-yellow-700 dark:text-yellow-400 hover:bg-yellow-400 hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">wb_sunny</span>
+              <span class="font-bold">Joyful</span>
+            </button>
+            <button
+              class="flex items-center gap-3 px-6 py-4 rounded-full bg-blue-400/10 border border-blue-400/20 text-blue-700 dark:text-blue-400 hover:bg-blue-400 hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">nightlight</span>
+              <span class="font-bold">Peaceful</span>
+            </button>
+            <button
+              class="flex items-center gap-3 px-6 py-4 rounded-full bg-rose-400/10 border border-rose-400/20 text-rose-700 dark:text-rose-400 hover:bg-rose-400 hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">favorite</span>
+              <span class="font-bold">Romantic</span>
+            </button>
+            <button
+              class="flex items-center gap-3 px-6 py-4 rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-400 hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">explore</span>
+              <span class="font-bold">Adventurous</span>
+            </button>
+            <button
+              class="flex items-center gap-3 px-6 py-4 rounded-full bg-purple-400/10 border border-purple-400/20 text-purple-700 dark:text-purple-400 hover:bg-purple-400 hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">auto_fix_high</span>
+              <span class="font-bold">Nostalgic</span>
+            </button>
+          </div>
+        </section>
+        <!-- Memory Insights -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6">
+          <div
+            class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/80 to-primary p-1"
+          >
+            <div
+              class="bg-background-light dark:bg-background-dark rounded-[calc(1rem-2px)] p-8 h-full flex flex-col justify-between"
+            >
+              <div class="space-y-4">
+                <div
+                  class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider"
+                >
+                  On this day
+                </div>
+                <h3 class="text-3xl font-black">Memory of 2018</h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Remember your trip to Iceland? Today marks 6 years since you
+                  landed in Reykjavik.
+                </p>
+              </div>
+              <div class="mt-8 flex items-center gap-4">
+                <button
+                  class="px-6 py-2 bg-primary text-white rounded-lg font-bold"
+                >
+                  Relive Moment
+                </button>
+                <button
+                  class="px-6 py-2 border border-slate-300 dark:border-slate-700 rounded-lg font-bold"
+                >
+                  Share Recap
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-slate-200 dark:bg-slate-800/30 rounded-2xl p-8 border border-slate-300 dark:border-slate-700/50"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-bold">Collection Stats</h3>
+              <span class="material-symbols-outlined text-slate-400"
+                >query_stats</span
+              >
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-600 dark:text-slate-400"
+                  >Total Photos</span
+                >
+                <span class="font-bold">12,458</span>
+              </div>
+              <div
+                class="w-full bg-slate-300 dark:bg-slate-700 h-2 rounded-full overflow-hidden"
+              >
+                <div class="bg-primary h-full w-3/4"></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-600 dark:text-slate-400"
+                  >Total Videos</span
+                >
+                <span class="font-bold">482</span>
+              </div>
+              <div
+                class="w-full bg-slate-300 dark:bg-slate-700 h-2 rounded-full overflow-hidden"
+              >
+                <div class="bg-primary h-full w-1/4"></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-600 dark:text-slate-400"
+                  >Storage Used</span
+                >
+                <span class="font-bold">84.2 GB</span>
+              </div>
+              <div
+                class="w-full bg-slate-300 dark:bg-slate-700 h-2 rounded-full overflow-hidden"
+              >
+                <div class="bg-primary h-full w-[84%]"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer
+        class="border-t border-slate-200 dark:border-slate-800 py-10 px-6 lg:px-20 text-center text-slate-500 dark:text-slate-500 text-sm"
+      >
+        <p>© 2024 Memory Directory. Capturing the essence of time.</p>
+        <div class="flex justify-center gap-6 mt-4">
+          <a class="hover:text-primary transition-colors" href="#"
+            >Privacy Policy</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Terms of Service</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Help Center</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../assets/js/Memories.js"></script>
+</html>

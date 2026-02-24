@@ -1,0 +1,43 @@
+.glass-portal {
+  background: rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-portal {
+  background: rgba(34, 22, 16, 0.4);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gradient-bg {
+  background: radial-gradient(
+    circle at top left,
+
+    #f8f6f6 0%,
+
+    #ec5b1322 50%,
+
+    #f8f6f6 100%
+  );
+}
+
+.dark .gradient-bg {
+  background: radial-gradient(
+    circle at top left,
+
+    #221610 0%,
+
+    #ec5b1311 50%,
+
+    #221610 100%
+  );
+}

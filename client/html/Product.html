@@ -1,0 +1,477 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/Product.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-slate-900 dark:text-white">
+              <div
+                class="size-8 bg-primary rounded-lg flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-slate-900"
+                  >camera</span
+                >
+              </div>
+              <h2 class="text-xl font-bold leading-tight tracking-tight">
+                LiveSnap
+              </h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+              <a
+                class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                href="#"
+                >Home</a
+              >
+              <a
+                class="text-slate-900 dark:text-white text-sm font-bold border-b-2 border-primary"
+                href="#"
+                >Catalog</a
+              >
+              <a
+                class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                href="#"
+                >Keepsakes</a
+              >
+              <a
+                class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                href="#"
+                >Profile</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <label
+              class="hidden sm:flex items-center relative min-w-40 lg:min-w-64"
+            >
+              <span
+                class="material-symbols-outlined absolute left-3 text-slate-400"
+                >search</span
+              >
+              <input
+                class="w-full h-10 pl-10 pr-4 rounded-full border-none bg-slate-100 dark:bg-slate-800 focus:ring-2 focus:ring-primary text-sm"
+                placeholder="Search treasures..."
+              />
+            </label>
+            <button
+              class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800 hover:bg-primary transition-all"
+            >
+              <span
+                class="material-symbols-outlined text-slate-700 dark:text-slate-200"
+                >shopping_cart</span
+              >
+            </button>
+            <div
+              class="h-10 w-10 rounded-full bg-primary/30 border-2 border-white dark:border-slate-700 bg-cover bg-center"
+              data-alt="User profile avatar portrait"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAm30krxc96Mg-rp2Oi_NUJsfPDblTj6wt7KPD0XffNwJ_tHpQJ76TBw3Xx8mEDaawEDmqTAuAUpB-fT_NNWW526a3suneS9X3bMUoSJMh44K4Djf2P-Bs-4UdN42iYWuLbSNgNcoxYB7arZFeTS7h6HQdBDNsWPUKqbscKkCbBXB9RxPs6rEHXsOXvUoitmTVMWCgP_apKaavta93CsMuWUkUwlztKOKBEpoJKM6KWRskzioJvCV9HzOFyKLrfCyTgl6gKdhWoVug&quot;);
+              "
+            ></div>
+          </div>
+        </header>
+        <main class="flex-1 max-w-7xl mx-auto w-full px-6 py-12">
+          <section class="mb-12">
+            <div class="max-w-3xl">
+              <h1
+                class="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4"
+              >
+                Product
+                <span
+                  class="text-primary-600 dark:text-primary underline decoration-primary decoration-4"
+                  >Catalog</span
+                >
+              </h1>
+              <p
+                class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+              >
+                Transform your digital memories into physical treasures. From
+                premium photo books to custom frames, discover the perfect way
+                to preserve your favorite moments forever.
+              </p>
+            </div>
+          </section>
+          <div class="flex gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide">
+            <button
+              class="px-6 py-2 rounded-full bg-primary text-slate-900 font-bold whitespace-nowrap"
+            >
+              All Collections
+            </button>
+            <button
+              class="px-6 py-2 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700 whitespace-nowrap hover:border-primary"
+            >
+              Photo Books
+            </button>
+            <button
+              class="px-6 py-2 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700 whitespace-nowrap hover:border-primary"
+            >
+              Custom Frames
+            </button>
+            <button
+              class="px-6 py-2 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700 whitespace-nowrap hover:border-primary"
+            >
+              Artistic Prints
+            </button>
+          </div>
+          <div class="grid grid-cols-1 gap-8">
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col lg:flex-row group hover:shadow-2xl transition-all duration-500"
+            >
+              <div class="lg:w-1/2 h-80 lg:h-auto relative overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Stack of premium high quality photo books"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDt962q3OUihuDnfLKZzhmCV7flnBRSYRmUd4Rg8DT99xEvgXOKAL-KH5mqEFUSB2K65bwQNmESFb71oe2PGh778PWKRow0D57GP_QOgmV1YPzGosoxHz2N_mhCqMLPx5_4_6_G8w0wK0efUyMmv7Nq-svKSWZeChDtoxagiczji5GX1WqnCecFpxYDiFJUdrVE-t2fYIIyEJbspjtJRkMkCqbcbsEX8fPcf7B-xO9L3ycNPJ7ZiPtust6Cuay9o1QMU2nF4la-yYA&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                ></div>
+                <span
+                  class="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-xs font-bold text-slate-900 uppercase tracking-widest"
+                  >Most Popular</span
+                >
+              </div>
+              <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <h3
+                  class="text-3xl font-bold mb-4 text-slate-900 dark:text-white"
+                >
+                  Premium Photo Books
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed"
+                >
+                  Our signature lay-flat photo books feature archival-grade
+                  paper and handcrafted covers. Perfect for weddings, travel
+                  journals, and family archives.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+                >
+                  <div>
+                    <p
+                      class="text-sm font-medium text-slate-500 uppercase tracking-wider"
+                    >
+                      Starting at
+                    </p>
+                    <p
+                      class="text-2xl font-bold text-slate-900 dark:text-white"
+                    >
+                      $29.99
+                    </p>
+                  </div>
+                  <button
+                    class="w-full sm:w-auto px-10 py-4 rounded-full bg-primary text-slate-900 font-bold hover:shadow-lg hover:shadow-primary/40 transition-all flex items-center justify-center gap-2 group-btn"
+                  >
+                    Visit Shop
+                    <span class="material-symbols-outlined text-sm font-bold"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col lg:flex-row-reverse group hover:shadow-2xl transition-all duration-500"
+            >
+              <div class="lg:w-1/2 h-80 lg:h-auto relative overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Minimalist wooden and metal picture frames on wall"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAcRiv_8ioxnjOFaDijWDi-5PXUb3QyXaN0KeweNkwJoeDi4b9w1_k6QimqvCpinPGmC3Knsz11zA_Ap4cbZunvzJD7yJudGM9500zutUI5Q5rk4LhiY-eGXztdGoP3E9hJlYKQ6y-uAeeTix0-u49GDnp1bD6EmdEkhtwtGrFe63i5sqSBN-PHfNjkpHtxV0rbpl1XNdmT2L_DPNNwLGlNn7PC4zNyZ8Y2bg3Ri564mqnOyHe7vNgsofqug5Dmaq0-zgEID568L4g&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                ></div>
+              </div>
+              <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <h3
+                  class="text-3xl font-bold mb-4 text-slate-900 dark:text-white"
+                >
+                  Custom Frames
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed"
+                >
+                  Elevate your space with handcrafted frames in solid wood and
+                  brushed metals. Available in custom sizes with gallery-quality
+                  matting.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+                >
+                  <div>
+                    <p
+                      class="text-sm font-medium text-slate-500 uppercase tracking-wider"
+                    >
+                      Starting at
+                    </p>
+                    <p
+                      class="text-2xl font-bold text-slate-900 dark:text-white"
+                    >
+                      $15.00
+                    </p>
+                  </div>
+                  <button
+                    class="w-full sm:w-auto px-10 py-4 rounded-full bg-primary text-slate-900 font-bold hover:shadow-lg hover:shadow-primary/40 transition-all flex items-center justify-center gap-2 group-btn"
+                  >
+                    Visit Shop
+                    <span class="material-symbols-outlined text-sm font-bold"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col lg:flex-row group hover:shadow-2xl transition-all duration-500"
+            >
+              <div class="lg:w-1/2 h-80 lg:h-auto relative overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Vibrant artistic wall prints in gallery setting"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAWcRbBh1piCH1wdwOvk1l9fXpBbxfqtCiMUnXGCVHfu-o1w-OYiASOKSOJdljwpYcxaU1ajKpfG6b3GsXGVkRashbNgEhQPxUHO16Dd3bItlQ5bs9u_3ZOJNrPMl_E_yOz8XP1irLHd9IVFlgs2VWmBJijBpi2OZ6yR-yzp9AHdNL8xZlbag8RDDBEVYHUVWf80NmlCmD9Gdbb6s_gLFOnp29zWqPDuN7hYjtjGVCOkpH3PyJvZyl_JRbVRziQfhc1KzRXTfxDh4I&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                ></div>
+              </div>
+              <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <h3
+                  class="text-3xl font-bold mb-4 text-slate-900 dark:text-white"
+                >
+                  Artistic Prints
+                </h3>
+                <p
+                  class="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed"
+                >
+                  Giclée prints on museum-quality canvas and fine art paper.
+                  Bring your photos to life with professional color calibration
+                  and deep contrast.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+                >
+                  <div>
+                    <p
+                      class="text-sm font-medium text-slate-500 uppercase tracking-wider"
+                    >
+                      Starting at
+                    </p>
+                    <p
+                      class="text-2xl font-bold text-slate-900 dark:text-white"
+                    >
+                      $12.50
+                    </p>
+                  </div>
+                  <button
+                    class="w-full sm:w-auto px-10 py-4 rounded-full bg-primary text-slate-900 font-bold hover:shadow-lg hover:shadow-primary/40 transition-all flex items-center justify-center gap-2 group-btn"
+                  >
+                    Visit Shop
+                    <span class="material-symbols-outlined text-sm font-bold"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-20 p-10 rounded-xl bg-slate-900 text-white relative overflow-hidden"
+          >
+            <div
+              class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8"
+            >
+              <div class="max-w-xl">
+                <h2 class="text-3xl font-bold mb-4">
+                  Can't decide on a format?
+                </h2>
+                <p class="text-slate-400 text-lg">
+                  Our AI curator can help you choose the best physical format
+                  based on the resolution and style of your digital collection.
+                </p>
+              </div>
+              <button
+                class="px-8 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-primary transition-colors"
+              >
+                Start Assistant
+              </button>
+            </div>
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-20 -mt-20 blur-3xl"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full -ml-20 -mb-20 blur-3xl"
+            ></div>
+          </div>
+        </main>
+        <footer
+          class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 px-6 lg:px-20"
+        >
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+              <div
+                class="flex items-center gap-3 text-slate-900 dark:text-white mb-6"
+              >
+                <div
+                  class="size-6 bg-primary rounded flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-xs font-bold text-slate-900"
+                    >camera</span
+                  >
+                </div>
+                <h2 class="text-lg font-bold">LiveSnap</h2>
+              </div>
+              <p
+                class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6"
+              >
+                Turning digital snapshots into timeless physical memories since
+                2024.
+              </p>
+              <div class="flex gap-4">
+                <a
+                  class="h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >social_leaderboard</span
+                  >
+                </a>
+                <a
+                  class="h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm">share</span>
+                </a>
+                <a
+                  class="h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold mb-6 text-slate-900 dark:text-white">
+                Products
+              </h4>
+              <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Photo Books</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Wall Art</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Custom Gifts</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Bulk Orders</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-6 text-slate-900 dark:text-white">
+                Support
+              </h4>
+              <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Help Center</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Shipping Info</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Returns</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-6 text-slate-900 dark:text-white">
+                Newsletter
+              </h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+                Get 10% off your first print.
+              </p>
+              <div class="flex gap-2">
+                <input
+                  class="flex-1 px-4 py-2 rounded-full border-none bg-slate-100 dark:bg-slate-800 text-sm"
+                  placeholder="Email address"
+                />
+                <button
+                  class="px-4 py-2 rounded-full bg-primary text-slate-900 font-bold text-sm"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400"
+          >
+            <p>© 2024 LiveSnap Inc. All rights reserved.</p>
+            <div class="flex gap-6">
+              <a class="hover:text-slate-900 dark:hover:text-white" href="#"
+                >Privacy Policy</a
+              >
+              <a class="hover:text-slate-900 dark:hover:text-white" href="#"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="../assets/js/Product.js"></script>
+</html>

@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
     <!-- LinkHomeCss -->
-    <link rel="stylesheet" href="./assets/css/Home.css" />
+    <link rel="stylesheet" href="../assets/css/Home.css" />
   </head>
   <body
     class="bg-pastel-mesh min-h-screen font-display antialiased text-slate-900 selection:bg-rose-200 overflow-x-hidden"
@@ -79,15 +79,16 @@
           >
             <span>Upload</span>
           </button>
-          <div
-            class="h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-md cursor-pointer hover:scale-105 transition-transform"
+          <a
+            class="h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-md cursor-pointer hover:scale-105 transition-transform login-avatar"
+            href="Welcome.html"
           >
             <img
               alt="User Profile"
               class="h-full w-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVGfcF1E6d5WwKNWRgulecNb2UpiTuq81Bedx1GWVpiVQaJ9ROrbJ1lb0HvBHQr4Caw7Bj1HbIV0vJ_SLyhucs06JZsanOaXxgLTA40XT5Axv6-z3_7hIixTtj3yFYk0caONRchhYFSmGrQcFsDodCUbiz0jGQvsPp0zgPkxGEuwYjH8Ot7IIqASTicvQLoi7lRWw-MoIKjtQeq4cwVjtWl1ygKy0oP4xlpZgOAX2nnl90XMTkjgUiq33Xwi89iu5lCCGP466lcPo"
             />
-          </div>
+          </a>
         </div>
       </header>
       <main
@@ -481,11 +482,12 @@
                 <div
                   class="group flex min-w-[100px] flex-col items-center gap-3 cursor-pointer"
                 >
-                  <div
+                  <a
+                    href="Garrely.html"
                     class="relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tr from-rose-400 to-orange-300 text-white shadow-lg ring-4 ring-white/50 scale-110"
                   >
                     <span class="material-symbols-outlined">star</span>
-                  </div>
+                  </a>
                   <span class="text-base font-bold text-slate-900">2024</span>
                 </div>
                 <div
@@ -573,5 +575,5 @@
   </body>
 
   <!-- Home Js  -->
-  <script src="./assets/js/Home.js"></script>
+  <script src="../assets/js/Home.js"></script>
 </html>

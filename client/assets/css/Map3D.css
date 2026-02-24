@@ -1,0 +1,98 @@
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Custom Scrollbar for glass panels */
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.glass-panel {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 22, 46, 0.8) 0%,
+
+    rgba(20, 17, 34, 0.6) 100%
+  );
+
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.map-bg {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+
+    #1a1533 0%,
+
+    #0b0a14 100%
+  );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Grid pattern overlay */
+
+.map-bg::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background-image:
+    linear-gradient(rgba(75, 43, 238, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 43, 238, 0.1) 1px, transparent 1px);
+
+  background-size: 100px 100px;
+
+  transform: perspective(1000px) rotateX(60deg) scale(2);
+
+  transform-origin: center top;
+
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+/* Simulated glowing nodes */
+
+.glow-point {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: #4b2bee;
+
+  box-shadow: 0 0 20px 5px rgba(75, 43, 238, 0.6);
+
+  opacity: 0.6;
+}

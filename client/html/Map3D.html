@@ -1,0 +1,516 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LiveSnap Memory Map</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/Map3D.css" />
+  </head>
+  <body
+    class="bg-background-dark text-slate-100 h-screen overflow-hidden flex flex-col map-bg"
+  >
+    <!-- Ambient background elements -->
+    <div
+      class="glow-point w-96 h-96 top-[-10%] left-[-10%] blur-[100px] opacity-20"
+    ></div>
+    <div
+      class="glow-point w-[500px] h-[500px] bottom-[-20%] right-[-10%] bg-indigo-600 blur-[120px] opacity-20"
+    ></div>
+    <!-- Navigation Bar (Floating Style) -->
+    <div class="w-full z-50 px-6 pt-6">
+      <header
+        class="glass-panel mx-auto max-w-[1440px] rounded-3xl flex items-center justify-between px-8 py-4"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-8 text-primary">
+              <span class="material-symbols-outlined text-[32px]">camera</span>
+            </div>
+            <h2 class="text-white text-xl font-bold tracking-tight">
+              LiveSnap
+            </h2>
+          </div>
+          <!-- Search -->
+          <label
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-4 h-12 w-80 transition-colors focus-within:bg-white/10 focus-within:border-primary/50"
+          >
+            <span class="material-symbols-outlined text-slate-400">search</span>
+            <input
+              class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full text-sm font-medium"
+              placeholder="Search memories, places..."
+            />
+          </label>
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-2 bg-white/5 p-1 rounded-2xl border border-white/10"
+        >
+          <a
+            class="px-5 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+            href="#"
+            >Memories</a
+          >
+          <a
+            class="px-5 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+            href="#"
+            >Albums</a
+          >
+          <a
+            class="px-5 py-2.5 text-sm font-bold text-white bg-primary shadow-lg shadow-primary/30 rounded-xl"
+            href="#"
+            >Map</a
+          >
+          <a
+            class="px-5 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+            href="#"
+            >Favorites</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="size-12 flex items-center justify-center rounded-2xl bg-white/5 text-white hover:bg-white/10 border border-white/10 transition-colors"
+          >
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+          <button
+            class="size-12 flex items-center justify-center rounded-2xl bg-white/5 text-white hover:bg-white/10 border border-white/10 transition-colors"
+          >
+            <span class="material-symbols-outlined">settings</span>
+          </button>
+          <div
+            class="size-12 rounded-2xl bg-cover bg-center border border-white/10 shadow-lg"
+            data-alt="User profile picture"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBXyHmyNusv3ob0yQZzzkpuopJLhQMpK8N7vYmL_gBb4tBIXhAblJ8cm1TwmDy3uJDymS3RjlzgiSWKd-mQylUjAgQfXIJaadpS4lb3zHtxW7pn3japZ6NBpy3QftqSwFEcC4kJfO-8T2IiuCg_VfrixvxvuqU-4mcCJjjOpJbfFFEfCGWjUjyjJB8mmpB8tHSj9O0irBPdJimc88kDKbY27_wD7YiYcKXYrsdWHSno5g3Vr8QqHeFpqOSOVMXUCtvQ_bdxCO5trTc&quot;);
+            "
+          ></div>
+        </div>
+      </header>
+    </div>
+    <!-- Main Content Area -->
+    <main class="flex-1 relative w-full h-full overflow-hidden p-6 gap-6 flex">
+      <!-- Left Sidebar: Map Controls & Context -->
+      <aside class="w-80 flex flex-col gap-4 z-40 pointer-events-none">
+        <!-- Location Context Card -->
+        <div
+          class="glass-panel p-6 rounded-3xl pointer-events-auto flex flex-col gap-4 animate-fade-in-up"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <p
+                class="text-primary text-sm font-bold tracking-wider uppercase mb-1"
+              >
+                Current View
+              </p>
+              <h1 class="text-3xl font-bold text-white leading-tight">
+                Vietnam
+              </h1>
+              <p class="text-slate-400 text-sm mt-1 flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm"
+                  >calendar_month</span
+                >
+                Oct 12 - Nov 03, 2023
+              </p>
+            </div>
+            <button
+              class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white"
+            >
+              <span class="material-symbols-outlined text-xl">share</span>
+            </button>
+          </div>
+          <div class="flex gap-2 mt-2">
+            <div
+              class="flex-1 bg-white/5 rounded-2xl p-3 border border-white/10"
+            >
+              <p class="text-2xl font-bold text-white">142</p>
+              <p class="text-xs text-slate-400 uppercase tracking-wide">
+                Memories
+              </p>
+            </div>
+            <div
+              class="flex-1 bg-white/5 rounded-2xl p-3 border border-white/10"
+            >
+              <p class="text-2xl font-bold text-white">3</p>
+              <p class="text-xs text-slate-400 uppercase tracking-wide">
+                Cities
+              </p>
+            </div>
+          </div>
+          <div
+            class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
+          ></div>
+          <div class="flex flex-col gap-2">
+            <p
+              class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1"
+            >
+              Highlights
+            </p>
+            <button
+              class="flex items-center gap-3 p-2 rounded-xl hover:bg-white/5 transition group text-left"
+            >
+              <div
+                class="size-10 rounded-lg bg-cover bg-center shadow-md group-hover:scale-105 transition-transform"
+                data-alt="Hanoi street scene"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDKqTaoKaRfgCuVUo4V-bEfCdzRevlFIOk_yJl-q0mAKi48xYE8ewmSTKydJBwSpbI2U343vHKPNXrMii-caUEovY6CRx2Wv7fEA7LewFpvmMpIqCdapRCGyMGAn1WDgrzzXU2BBm0Tf_ssuSIINGZjM5yWCtD0dHkb0pPHHezoy_g1yF92OUaIVWz2OzDZRZvhH5wNG7g3clY0IeW0RIdH_-4amRSH7YZK-eRg8Ipl1VkA8Td4eTugoFv2ezDybqfDH0mLg0aDwT8&quot;);
+                "
+              ></div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-white truncate">
+                  Hanoi Old Quarter
+                </p>
+                <p class="text-xs text-slate-400">42 photos</p>
+              </div>
+              <span
+                class="material-symbols-outlined text-slate-600 text-sm group-hover:text-primary transition-colors"
+                >arrow_forward_ios</span
+              >
+            </button>
+            <button
+              class="flex items-center gap-3 p-2 rounded-xl hover:bg-white/5 transition group text-left"
+            >
+              <div
+                class="size-10 rounded-lg bg-cover bg-center shadow-md group-hover:scale-105 transition-transform"
+                data-alt="Halong Bay landscape"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBcwhffMXeWubEMa1iicx8xOGy0mNn9KS3tvL-Z0pC5Rm5EkZtOmTw7TArkpHwbhfZYSJAsu7FwQhCo24hwfeidlOLQSd9E7ESNGVR_pqVc6a30LcazF7iU-Vt1u4gSUHayGbwLdtEJw-3R9ENrqB9AyWsvyY0EKniOL_SA8pAdR9uq-DOKG4BXtqoYU9mY2nnlCCvRaVzErqtB-kDavX9-6NuSBDTJ5hGD4AJ31AfEI_9_T8rhOYb-uoDRfTfcea8_3fKHeXb0_zo&quot;);
+                "
+              ></div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-white truncate">
+                  Ha Long Bay
+                </p>
+                <p class="text-xs text-slate-400">89 photos</p>
+              </div>
+              <span
+                class="material-symbols-outlined text-slate-600 text-sm group-hover:text-primary transition-colors"
+                >arrow_forward_ios</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Map Controls -->
+        <div
+          class="glass-panel p-2 rounded-3xl pointer-events-auto flex flex-col items-center gap-1 self-start"
+        >
+          <button
+            class="size-10 rounded-2xl flex items-center justify-center text-white hover:bg-white/10 transition"
+          >
+            <span class="material-symbols-outlined">add</span>
+          </button>
+          <div class="w-8 h-px bg-white/10"></div>
+          <button
+            class="size-10 rounded-2xl flex items-center justify-center text-white hover:bg-white/10 transition"
+          >
+            <span class="material-symbols-outlined">remove</span>
+          </button>
+          <div class="w-8 h-px bg-white/10"></div>
+          <button
+            class="size-10 rounded-2xl flex items-center justify-center text-primary hover:bg-white/10 transition"
+          >
+            <span class="material-symbols-outlined">my_location</span>
+          </button>
+        </div>
+      </aside>
+      <!-- Main Map Area (Simulated) -->
+      <div class="absolute inset-0 z-0 w-full h-full">
+        <!-- Background Map Image -->
+        <div
+          class="w-full h-full bg-cover bg-center opacity-40 mix-blend-overlay"
+          data-alt="Abstract dark world map background"
+          style="
+            background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAqqZ3ZXaGMg-1qLX6fqSs9dbMxA-STP262pMhoPpGS4x_QorahC70GTHiTbMsWHt94-s8AiX3a2vBzCPsc-FrRpnD6YK-ZoFAFiwnqtlyhRkWRevGeymMdggOaeluRibIbYyHPeuYmo0CfWgxMG0raY3y9nRJlt4OwuzHopQr5lQdBlSbStOLcdDyccqQx-l_n2XWRv6LvKMYtfs-Qa9Go5T1tsU835M6bDQM_oLp5jBZRR8xLErpBNecAIOAFhDATBWcY0BHW6uE&quot;);
+            filter: contrast(120%) saturate(0%);
+          "
+        ></div>
+        <!-- Connection Lines (SVG) -->
+        <svg
+          class="absolute inset-0 w-full h-full pointer-events-none opacity-40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M 600 400 Q 800 300 950 350"
+            fill="none"
+            stroke="#4b2bee"
+            stroke-dasharray="5 5"
+            stroke-width="2"
+          ></path>
+          <path
+            d="M 950 350 Q 1100 450 1200 400"
+            fill="none"
+            stroke="#4b2bee"
+            stroke-width="1"
+          ></path>
+          <circle cx="950" cy="350" fill="#4b2bee" r="4">
+            <animate
+              attributename="r"
+              dur="2s"
+              repeatcount="indefinite"
+              values="4;8;4"
+            ></animate>
+            <animate
+              attributename="opacity"
+              dur="2s"
+              repeatcount="indefinite"
+              values="1;0.5;1"
+            ></animate>
+          </circle>
+        </svg>
+        <!-- Floating Photo Cluster Markers -->
+        <!-- Marker 1: Active -->
+        <div
+          class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-3 z-10 cursor-pointer group"
+        >
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-primary/50 blur-xl rounded-full scale-150 animate-pulse"
+            ></div>
+            <div
+              class="relative size-20 rounded-2xl border-2 border-primary bg-background-dark p-1 shadow-[0_0_30px_rgba(75,43,238,0.5)] transform transition-transform group-hover:scale-110"
+            >
+              <img
+                alt="Hoi An Lanterns"
+                class="w-full h-full object-cover rounded-xl"
+                data-alt="Hoi An lanterns at night"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH3F9mouf6zKxEeeA2NnO72_29xTAFC2lVeNLiib8ew1wy1-FWxpLwJ9QR_Lh2K8e0pGn01IXo-GMGPNjgh_yTkPSEjWiNcSkdiCXlCyDd6nrg2BkuQpmuoX85_gGsTsoANzwFeM3Nn09Pyd66p3FyHcpFj4W72oZEUdCwWLT4SCBywamIFCt7PQ5I2dvQd02sOSAXyL9ZMSH_HuHNU687OFNuqs8NbuYq2YkVcSrKWqfLix5KiFGUOdDNnS5BYAjzaCKzyUviYZE"
+              />
+              <div
+                class="absolute -top-3 -right-3 size-8 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center border-2 border-background-dark shadow-lg"
+              >
+                42
+              </div>
+            </div>
+          </div>
+          <div
+            class="glass-panel px-4 py-1.5 rounded-full text-xs font-bold tracking-wide text-white opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0"
+          >
+            Hoi An
+          </div>
+        </div>
+        <!-- Marker 2: Inactive -->
+        <div
+          class="absolute top-[45%] left-[65%] flex flex-col items-center gap-2 z-10 cursor-pointer group opacity-80 hover:opacity-100 transition-opacity"
+        >
+          <div
+            class="relative size-14 rounded-2xl border border-white/20 bg-background-card p-1 shadow-lg transform transition-transform group-hover:scale-110"
+          >
+            <img
+              alt="Halong Bay"
+              class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all"
+              data-alt="Halong Bay scenic view"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI5jhjQH4lnWUkNn78fNefuS8XEl6cYU5Zvkfe304pXCxAB3MxewomQOQIsBcMrQEPnkRRI3AYarTIfILFW6abKEaLjV1AwyVi189Y65sjcZIO4eHqRk3IYaqgyU0TjnCVFxUbRo4CQ-pwZzAqjhkDOaNN2ay9A4OrmqyikUXH6KbSP6buFxa6Bpbqdug7-gS3ryPuX8CEGObcBmEAzsu82L3Dt4srLq0F6bOB5LykJHN5etdZrNyAw5jxdipKM2EhCXpjuM_hOwU"
+            />
+            <div
+              class="absolute -top-2 -right-2 size-6 bg-slate-700 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-background-dark"
+            >
+              89
+            </div>
+          </div>
+        </div>
+        <!-- Marker 3: Inactive -->
+        <div
+          class="absolute top-[25%] left-[40%] flex flex-col items-center gap-2 z-10 cursor-pointer group opacity-80 hover:opacity-100 transition-opacity"
+        >
+          <div
+            class="relative size-12 rounded-2xl border border-white/20 bg-background-card p-1 shadow-lg transform transition-transform group-hover:scale-110"
+          >
+            <img
+              alt="Hanoi"
+              class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all"
+              data-alt="Hanoi street life"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9mAigm2wqcYmAOgIfUdwXAwP-ulNa-2zXN6P5Elg-hAayR6jBRwDDgeYSIiWPXQ6TFQ9qn-M9uOLYXDceOD953y4ZDEjGHG2KU6h-PK-TiiewHI44pnAcuAsBMEPdUw3KxthMy9axguvuUKI9b8cbUXHWI9XwCxwAyTlZ1i9AhJez2IKG7Gkaq9bycQdVrKBb_jAnoXUqg4oOADoGIrx6vDtUzSoPyLUubd7MjJ3PNUfINi7cM37ZyA4JsXaEuPOmmp012Q1zHW4"
+            />
+            <div
+              class="absolute -top-2 -right-2 size-5 bg-slate-700 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-background-dark"
+            >
+              11
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side: Expanded Memory Cluster (Floating Secondary Window) -->
+      <div
+        class="absolute right-6 top-6 bottom-6 w-[480px] z-30 pointer-events-none flex flex-col justify-center"
+      >
+        <div
+          class="glass-panel w-full max-h-full overflow-hidden flex flex-col rounded-3xl shadow-2xl pointer-events-auto animate-fade-in-left border-l border-t border-white/10"
+        >
+          <!-- Header -->
+          <div class="p-6 pb-2 shrink-0">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <button
+                  class="size-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-300 transition"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >arrow_back</span
+                  >
+                </button>
+                <h3 class="text-xl font-bold text-white">
+                  Hoi An Ancient Town
+                </h3>
+              </div>
+              <button
+                class="text-xs font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg hover:bg-primary/20 transition uppercase tracking-wide"
+              >
+                View Album
+              </button>
+            </div>
+            <div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+              <button
+                class="px-4 py-1.5 rounded-full bg-white/10 text-white text-xs font-medium whitespace-nowrap border border-white/10 hover:bg-white/20 transition"
+              >
+                All
+              </button>
+              <button
+                class="px-4 py-1.5 rounded-full bg-transparent text-slate-400 text-xs font-medium whitespace-nowrap border border-white/5 hover:border-white/20 hover:text-white transition"
+              >
+                Food
+              </button>
+              <button
+                class="px-4 py-1.5 rounded-full bg-transparent text-slate-400 text-xs font-medium whitespace-nowrap border border-white/5 hover:border-white/20 hover:text-white transition"
+              >
+                Night
+              </button>
+              <button
+                class="px-4 py-1.5 rounded-full bg-transparent text-slate-400 text-xs font-medium whitespace-nowrap border border-white/5 hover:border-white/20 hover:text-white transition"
+              >
+                People
+              </button>
+            </div>
+          </div>
+          <!-- Grid Content -->
+          <div class="p-6 pt-2 overflow-y-auto flex-1">
+            <div class="grid grid-cols-2 gap-3">
+              <!-- Featured Large Item -->
+              <div
+                class="col-span-2 aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
+              >
+                <img
+                  alt="Hoi An lanterns"
+                  class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                  data-alt="Vibrant lanterns in Hoi An night market"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6oO0tqDuOl4tK6bXzKRuZUa7TGqyXPoDtQf-tRivVyUyC4RcEfy8j0R03JSkDrWzvcSpfSJQ52e2rVk3pG2jky6Gh84b37y0Xr2e0ZcDfGUTmucIGm9-uZM5HGv3RY6ELTGg5yVxhIkpZfEWg3SgUwzAT-4YqymrlZux1DG4B33PjrQuzvwwbAuC5oi7ZlTogmdukvOC9oyw01mXFOkrppoA1bKT5awRpgVitzxQ4rKHjm0qgNciIInhh485AMf5Dgciu95NS32E"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"
+                ></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <p class="text-white font-bold text-lg">
+                    Night Market Stroll
+                  </p>
+                  <p class="text-slate-300 text-xs">Oct 14 • 8:45 PM</p>
+                </div>
+                <div
+                  class="absolute top-4 right-4 bg-black/40 backdrop-blur-md p-1.5 rounded-lg text-white"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >favorite</span
+                  >
+                </div>
+              </div>
+              <!-- Grid Items -->
+              <div
+                class="aspect-square rounded-2xl overflow-hidden relative group cursor-pointer"
+              >
+                <img
+                  alt="Vietnamese Coffee"
+                  class="w-full h-full object-cover transition duration-300 group-hover:scale-110"
+                  data-alt="Traditional Vietnamese coffee dripping"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDO4X3qCKixyarPq7nozZEDMnEFUVE7SPBVwTfz6bd1RcTsIiGMEhEldCd08P9yPX-g-asQmSySMcmV38ddjQh-ybMzLbyF3npMsin4GODFKbjieYgLeJnMw3O-Pl_fMuP1wHo5E8Ku9zYNckem6GDkXM7BQeQdwnG99DWiO9Q1WBi836r2y-uE4ND8sgNb9MJF2vhb918uwXgV0yqxcCgdTSYQXMsIACCQ6tGOvftI03xVtWaGU8qtNBIMDcOtSPA2HCo43aMbvM"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"
+                ></div>
+              </div>
+              <div
+                class="aspect-square rounded-2xl overflow-hidden relative group cursor-pointer"
+              >
+                <img
+                  alt="Boat on river"
+                  class="w-full h-full object-cover transition duration-300 group-hover:scale-110"
+                  data-alt="Wooden boat on Thu Bon river"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF2OOCNUrYaFs9NP6zOQ5kBGo9geBjaw0dgdGpcJmxYhw6k1cL9vrY0400a0D5uywtklqB12GgchcLdCbx5ltyOtD9x_uYB4uQgLuIgeVwkYMHmt-FhZeFi2lAeEye6FwMccHwc4ktNN-DBeZ8NQG21RYDqX8M_dwM024sDiK1acnL8orr2GBQzwN1njCf0GDEv5jaUq4MS-s7s78yYj2cZOwGS3k2Rhcfo7-UjmFoYGiIpfBheGLISChBj6WJT5kk9_c0siMmW4g"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"
+                ></div>
+              </div>
+              <div
+                class="aspect-square rounded-2xl overflow-hidden relative group cursor-pointer"
+              >
+                <img
+                  alt="Architecture detail"
+                  class="w-full h-full object-cover transition duration-300 group-hover:scale-110"
+                  data-alt="Detailed architecture of ancient temple"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuZv9d-RSD9bEHKu2bqzZzWQQh9JKFs-lfscPEpPQYoCljXZbpYGNqZ7YHFpeAaLgZbGHnt_vZAtRHyjKtjmuHFCtPG9YE7CGh6gWUX_1ADDggLPCGggIm5cs4n9wRpLdZxjonvDogAYA7NwwNGwLdbw2AGUGOZesS898onH6Z-Lal_QBBVFQ6K8cI5j6xWnY6Y6Q5JsJYAx_UAs7pct494iFCslDdpJ7VRjF0vtmRHI0qHYubxFXYhubztDn2nTrTDgDBLkF4d04"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"
+                ></div>
+              </div>
+              <div
+                class="aspect-square rounded-2xl bg-white/5 flex flex-col items-center justify-center cursor-pointer hover:bg-white/10 transition border border-white/5 group"
+              >
+                <span
+                  class="text-2xl font-bold text-white group-hover:scale-110 transition-transform"
+                  >+38</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-wider text-slate-400 mt-1"
+                  >More</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Footer Actions -->
+          <div
+            class="p-4 border-t border-white/10 bg-black/20 backdrop-blur-xl flex justify-between items-center"
+          >
+            <div class="flex -space-x-2">
+              <div
+                class="size-8 rounded-full border-2 border-background-card bg-cover bg-center"
+                data-alt="User avatar 1"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBC8lsGXZktjQKRfYaAcVLe5y_4hf-vf9SXhNs8Db9qIAqyttbfzCSuztHtX2BT_D_-lB0UlCiXrDeSgerTb5cFrCyOCLw9DLE12yQLkWLkehAq4UZ6JuGLtRB3Ce5YtQG8VtcQo_ydCbO_GmtuTdCAwYvTy9vzQmur1Tw6CJ6TZ_9F3Dyjv7i-QdMmU5oKJMNltVA9a-W5edBpsUfMtGrpFcB1ZrEuKgNJMtRj4NqEABxkF3Gl4q4Zd1wLmFGsGZIrRlbgIeCLXk8&quot;);
+                "
+              ></div>
+              <div
+                class="size-8 rounded-full border-2 border-background-card bg-cover bg-center"
+                data-alt="User avatar 2"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBx4u61AYeKg1ZYZeqDAWphQSg0ZlX_Qo_aJA9imGt-Pzyr--ucYOY5rS_7EhRkGVxFIU4L8SyiTrs0Q-UbvXdZiYX45y3I3FrfEMPigfMF_SUX4ydXghN1ARrDM6WmqzmNpwvvnSxsv7u-iLeBd1Jp_Mffi00Wrkop-1HImLQ1BsuZms_Xtg7mipG4C3wDbCZnx2Ss9m-Yi98rY7BeurELEavT9-OVFSuhE--EXcH19RN7otyy5Ij7FSjrAHfiqq02ZT2_RMshbA0&quot;);
+                "
+              ></div>
+              <div
+                class="size-8 rounded-full border-2 border-background-card bg-slate-700 flex items-center justify-center text-[10px] text-white font-bold"
+              >
+                +2
+              </div>
+            </div>
+            <button
+              class="bg-primary hover:bg-primary/90 text-white rounded-xl px-4 py-2 text-sm font-bold shadow-lg shadow-primary/20 transition flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+              Play Story
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="../assets/js/Map3D.js"></script>
+</html>
